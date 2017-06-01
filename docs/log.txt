@@ -1,0 +1,26 @@
+20170525
+	+ set up project
+	+ researched java swing drawing options
+20170526
+	+ city names are drawn to canvas
+	+ put drawing control into scroll pane
+	+ created closest pair class
+	+ drew voronoi diagram lines using raw distance without reach check.
+	+ draw voronoi diagram lines using reach comparison and closest two map.
+20170527
+	+ assigned cities random colors and color the areas closest to them that color
+	+ fixed intvector2 distance estimation formula to be more continuous
+	+ changed color of city dot to a lighter version of the city's color
+	+ made a separate city dot drawing method
+	+ sort city list by population automatically
+	+ made an alternate map filler that uses a queue and pushes all city point seeds simultaneously to start
+	+ saved to image
+20170528
+	+ researched and tested polygon drawing in java (early morning)
+	+ drew outlines of land (afternoon and night)
+todo
+	- draw outlines of other regions
+	- add more cities from around the world
+	- find a way to avoid writing text to the same y coord if the x coords of two cities are close
+	- add a toggle button to control whether boundaries get drawn
+

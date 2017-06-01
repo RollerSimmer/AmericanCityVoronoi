@@ -1,0 +1,444 @@
+run:
+CityList:
+City: { name="New York", pos=(861,293), reach=7, pop100k=236, color=myutil.MyColor[r=196,g=217,b=50] }
+City: { name="Los Angeles", pos=(416,360), reach=6, pop100k=185, color=myutil.MyColor[r=141,g=249,b=142] }
+City: { name="Chicago", pos=(723,282), reach=5, pop100k=99, color=myutil.MyColor[r=194,g=219,b=115] }
+City: { name="DC-Baltimore", pos=(832,309), reach=5, pop100k=95, color=myutil.MyColor[r=235,g=212,b=131] }
+City: { name="Bay Area", pos=(376,322), reach=5, pop100k=83, color=myutil.MyColor[r=199,g=212,b=223] }
+City: { name="Boston", pos=(890,277), reach=5, pop100k=75, color=myutil.MyColor[r=122,g=251,b=206] }
+City: { name="Dallas-Ft. Worth", pos=(630,372), reach=5, pop100k=74, color=myutil.MyColor[r=196,g=212,b=206] }
+City: { name="Houston", pos=(646,402), reach=5, pop100k=67, color=myutil.MyColor[r=213,g=212,b=168] }
+City: { name="Miami", pos=(798,442), reach=5, pop100k=67, color=myutil.MyColor[r=200,g=212,b=185] }
+City: { name="Philadelphia", pos=(849,300), reach=5, pop100k=67, color=myutil.MyColor[r=188,g=214,b=209] }
+City: { name="Toronto-Hamilton", pos=(804,265), reach=5, pop100k=67, color=myutil.MyColor[r=228,g=195,b=200] }
+City: { name="Atlanta", pos=(756,362), reach=4, pop100k=62, color=myutil.MyColor[r=179,g=224,b=195] }
+City: { name="Detroit", pos=(769,276), reach=4, pop100k=53, color=myutil.MyColor[r=224,g=190,b=243] }
+City: { name="Phoenix", pos=(479,364), reach=4, pop100k=45, color=myutil.MyColor[r=188,g=228,b=138] }
+City: { name="Seattle", pos=(376,224), reach=4, pop100k=45, color=myutil.MyColor[r=214,g=206,b=179] }
+City: { name="Montreal", pos=(864,245), reach=4, pop100k=41, color=myutil.MyColor[r=171,g=212,b=251] }
+City: { name="Tampa Bay", pos=(774,421), reach=4, pop100k=39, color=myutil.MyColor[r=234,g=196,b=196] }
+City: { name="Twin Cities", pos=(668,250), reach=4, pop100k=38, color=myutil.MyColor[r=150,g=230,b=218] }
+City: { name="Cleveland", pos=(783,285), reach=4, pop100k=35, color=myutil.MyColor[r=208,g=208,b=198] }
+City: { name="Denver", pos=(551,302), reach=4, pop100k=33, color=myutil.MyColor[r=206,g=205,b=243] }
+City: { name="San Diego", pos=(429,372), reach=4, pop100k=33, color=myutil.MyColor[r=192,g=206,b=235] }
+City: { name="Orlando", pos=(787,416), reach=4, pop100k=31, color=myutil.MyColor[r=212,g=198,b=219] }
+City: { name="Portland", pos=(374,245), reach=4, pop100k=31, color=myutil.MyColor[r=245,g=204,b=132] }
+City: { name="St. Louis", pos=(698,314), reach=4, pop100k=29, color=myutil.MyColor[r=230,g=206,b=141] }
+City: { name="Pittsburgh", pos=(800,296), reach=3, pop100k=27, color=myutil.MyColor[r=235,g=192,b=225] }
+City: { name="Vancouver", pos=(369,207), reach=3, pop100k=26, color=myutil.MyColor[r=185,g=212,b=223] }
+City: { name="Charlotte", pos=(792,348), reach=3, pop100k=25, color=myutil.MyColor[r=188,g=208,b=253] }
+City: { name="Sacramento", pos=(385,314), reach=3, pop100k=25, color=myutil.MyColor[r=199,g=211,b=209] }
+City: { name="Columbus, OH", pos=(770,300), reach=3, pop100k=24, color=myutil.MyColor[r=209,g=212,b=195] }
+City: { name="Indianapolis", pos=(739,302), reach=3, pop100k=24, color=myutil.MyColor[r=198,g=212,b=213] }
+City: { name="Kansas City", pos=(654,309), reach=3, pop100k=24, color=myutil.MyColor[r=206,g=213,b=198] }
+City: { name="Salt Lake", pos=(481,292), reach=3, pop100k=24, color=myutil.MyColor[r=236,g=188,b=248] }
+City: { name="San Antonio", pos=(615,406), reach=3, pop100k=23, color=myutil.MyColor[r=242,g=188,b=234] }
+City: { name="Vegas", pos=(447,338), reach=3, pop100k=23, color=myutil.MyColor[r=162,g=242,b=157] }
+City: { name="Cincinnati", pos=(755,309), reach=3, pop100k=22, color=myutil.MyColor[r=192,g=211,b=206] }
+City: { name="Milwaukee", pos=(720,269), reach=3, pop100k=20, color=myutil.MyColor[r=126,g=244,b=212] }
+City: { name="NC Triangle", pos=(814,342), reach=3, pop100k=20, color=myutil.MyColor[r=179,g=233,b=137] }
+City: { name="Austin", pos=(622,397), reach=3, pop100k=19, color=myutil.MyColor[r=218,g=203,b=209] }
+City: { name="Nashville", pos=(732,338), reach=3, pop100k=19, color=myutil.MyColor[r=157,g=235,b=198] }
+City: { name="Tidewater", pos=(838,331), reach=3, pop100k=18, color=myutil.MyColor[r=247,g=186,b=202] }
+City: { name="NC Triad", pos=(800,339), reach=3, pop100k=16, color=myutil.MyColor[r=152,g=229,b=241] }
+City: { name="Providence", pos=(886,282), reach=3, pop100k=16, color=myutil.MyColor[r=211,g=206,b=206] }
+City: { name="Hartford", pos=(837,282), reach=3, pop100k=15, color=myutil.MyColor[r=217,g=195,b=229] }
+City: { name="Jaxville", pos=(783,397), reach=3, pop100k=15, color=myutil.MyColor[r=193,g=217,b=192] }
+City: { name="Louisville", pos=(743,318), reach=3, pop100k=15, color=myutil.MyColor[r=192,g=220,b=182] }
+City: { name="New Orleans", pos=(701,399), reach=3, pop100k=15, color=myutil.MyColor[r=195,g=212,b=202] }
+City: { name="Calgary", pos=(459,190), reach=3, pop100k=14, color=myutil.MyColor[r=169,g=217,b=244] }
+City: { name="Grand Rapids", pos=(743,270), reach=3, pop100k=14, color=myutil.MyColor[r=247,g=184,b=202] }
+City: { name="Memphis", pos=(700,349), reach=3, pop100k=14, color=myutil.MyColor[r=192,g=206,b=237] }
+City: { name="MPGB", pos=(719,393), reach=3, pop100k=14, color=myutil.MyColor[r=236,g=193,b=196] }
+City: { name="Oklahoma City", pos=(625,345), reach=3, pop100k=14, color=myutil.MyColor[r=162,g=228,b=192] }
+City: { name="Upstate SC", pos=(779,351), reach=3, pop100k=14, color=myutil.MyColor[r=184,g=229,b=163] }
+City: { name="Birmingham", pos=(732,365), reach=3, pop100k=13, color=myutil.MyColor[r=234,g=200,b=185] }
+City: { name="Edmonton", pos=(465,165), reach=3, pop100k=13, color=myutil.MyColor[r=206,g=205,b=233] }
+City: { name="Omaha-Lincoln", pos=(640,287), reach=3, pop100k=13, color=myutil.MyColor[r=218,g=200,b=216] }
+City: { name="Ottawa", pos=(843,246), reach=3, pop100k=13, color=myutil.MyColor[r=205,g=207,b=225] }
+City: { name="Richmond", pos=(825,325), reach=3, pop100k=13, color=myutil.MyColor[r=184,g=213,b=224] }
+City: { name="Albuquerque", pos=(534,349), reach=3, pop100k=12, color=myutil.MyColor[r=188,g=217,b=188] }
+City: { name="Buffalo", pos=(811,271), reach=3, pop100k=12, color=myutil.MyColor[r=210,g=206,b=185] }
+City: { name="Harrisburg", pos=(831,297), reach=3, pop100k=12, color=myutil.MyColor[r=128,g=248,b=179] }
+City: { name="Rochester", pos=(824,268), reach=3, pop100k=12, color=myutil.MyColor[r=220,g=199,b=198] }
+City: { name="Dayton", pos=(758,302), reach=3, pop100k=11, color=myutil.MyColor[r=198,g=201,b=107] }
+City: { name="El Paso", pos=(536,382), reach=3, pop100k=11, color=myutil.MyColor[r=207,g=200,b=230] }
+City: { name="Fresno", pos=(402,332), reach=3, pop100k=11, color=myutil.MyColor[r=140,g=221,b=101] }
+City: { name="Knoxville", pos=(761,340), reach=3, pop100k=11, color=myutil.MyColor[r=163,g=236,b=159] }
+City: { name="Tucson", pos=(491,378), reach=3, pop100k=11, color=myutil.MyColor[r=203,g=227,b=115] }
+City: { name="Tulsa", pos=(641,339), reach=3, pop100k=11, color=myutil.MyColor[r=197,g=209,b=213] }
+City: { name="Ft Myers", pos=(781,434), reach=3, pop100k=10, color=myutil.MyColor[r=247,g=202,b=128] }
+City: { name="Honolulu", pos=(22,487), reach=3, pop100k=10, color=myutil.MyColor[r=221,g=206,b=178] }
+City: { name="Bakersfield", pos=(410,347), reach=3, pop100k=9, color=myutil.MyColor[r=218,g=206,b=205] }
+City: { name="Chattanooga", pos=(748,349), reach=3, pop100k=9, color=myutil.MyColor[r=158,g=227,b=214] }
+City: { name="Columbia, SC", pos=(791,360), reach=3, pop100k=9, color=myutil.MyColor[r=216,g=198,b=206] }
+City: { name="Little Rock", pos=(676,353), reach=3, pop100k=9, color=myutil.MyColor[r=242,g=187,b=206] }
+City: { name="McAllen", pos=(618,438), reach=3, pop100k=9, color=myutil.MyColor[r=164,g=220,b=229] }
+City: { name="Baton Rouge", pos=(689,396), reach=2, pop100k=8, color=myutil.MyColor[r=213,g=200,b=217] }
+City: { name="Des Moines", pos=(664,284), reach=2, pop100k=8, color=myutil.MyColor[r=149,g=230,b=227] }
+City: { name="Madison", pos=(706,269), reach=2, pop100k=8, color=myutil.MyColor[r=227,g=202,b=176] }
+City: { name="Modesto", pos=(390,323), reach=2, pop100k=8, color=myutil.MyColor[r=217,g=199,b=217] }
+City: { name="Quebec City", pos=(888,232), reach=2, pop100k=8, color=myutil.MyColor[r=199,g=211,b=212] }
+City: { name="Winnipeg", pos=(629,201), reach=2, pop100k=8, color=myutil.MyColor[r=236,g=196,b=204] }
+City: { name="Boise", pos=(438,264), reach=2, pop100k=7, color=myutil.MyColor[r=213,g=203,b=211] }
+City: { name="Charleston, SC", pos=(800,372), reach=2, pop100k=7, color=myutil.MyColor[r=131,g=250,b=166] }
+City: { name="Charleston, WV", pos=(784,316), reach=2, pop100k=7, color=myutil.MyColor[r=143,g=235,b=251] }
+City: { name="Co Springs", pos=(552,311), reach=2, pop100k=7, color=myutil.MyColor[r=191,g=209,b=236] }
+City: { name="Huntsville", pos=(735,352), reach=2, pop100k=7, color=myutil.MyColor[r=228,g=188,b=255] }
+City: { name="Jackson", pos=(698,377), reach=2, pop100k=7, color=myutil.MyColor[r=225,g=196,b=234] }
+City: { name="Lexington", pos=(755,320), reach=2, pop100k=7, color=myutil.MyColor[r=239,g=188,b=224] }
+City: { name="South Bend", pos=(737,283), reach=2, pop100k=7, color=myutil.MyColor[r=226,g=193,b=228] }
+City: { name="Spokane", pos=(426,223), reach=2, pop100k=7, color=myutil.MyColor[r=174,g=235,b=161] }
+City: { name="Springfield, MA", pos=(875,279), reach=2, pop100k=7, color=myutil.MyColor[r=248,g=215,b=87] }
+City: { name="Syracuse", pos=(839,270), reach=2, pop100k=7, color=myutil.MyColor[r=221,g=208,b=169] }
+City: { name="Wichita", pos=(627,323), reach=2, pop100k=7, color=myutil.MyColor[r=214,g=203,b=212] }
+City: { name="Augusta, GA", pos=(779,366), reach=2, pop100k=6, color=myutil.MyColor[r=210,g=193,b=247] }
+City: { name="Ft. Wayne", pos=(749,289), reach=2, pop100k=6, color=myutil.MyColor[r=191,g=227,b=163] }
+City: { name="Portld ME", pos=(897,263), reach=2, pop100k=6, color=myutil.MyColor[r=234,g=193,b=190] }
+City: { name="Reno", pos=(402,305), reach=2, pop100k=6, color=myutil.MyColor[r=169,g=221,b=99] }
+City: { name="Space Coast", pos=(794,419), reach=2, pop100k=6, color=myutil.MyColor[r=236,g=199,b=166] }
+City: { name="Toledo", pos=(764,283), reach=2, pop100k=6, color=myutil.MyColor[r=168,g=243,b=129] }
+City: { name="Visalia", pos=(407,337), reach=2, pop100k=6, color=myutil.MyColor[r=217,g=208,b=181] }
+City: { name="Wyo Valley", pos=(842,287), reach=2, pop100k=6, color=myutil.MyColor[r=196,g=206,b=226] }
+City: { name="Columbus, GA", pos=(751,375), reach=2, pop100k=5, color=myutil.MyColor[r=192,g=214,b=193] }
+City: { name="Corpus Christi", pos=(628,422), reach=2, pop100k=5, color=myutil.MyColor[r=220,g=198,b=203] }
+City: { name="Davenport", pos=(694,284), reach=2, pop100k=5, color=myutil.MyColor[r=240,g=187,b=203] }
+City: { name="Kingsport", pos=(776,335), reach=2, pop100k=5, color=myutil.MyColor[r=156,g=236,b=187] }
+City: { name="Kitchener", pos=(795,265), reach=2, pop100k=5, color=myutil.MyColor[r=229,g=189,b=225] }
+City: { name="Lansing", pos=(754,273), reach=2, pop100k=5, color=myutil.MyColor[r=178,g=209,b=246] }
+City: { name="London", pos=(788,270), reach=2, pop100k=5, color=myutil.MyColor[r=188,g=222,b=196] }
+City: { name="Myrtle Beach", pos=(811,363), reach=2, pop100k=5, color=myutil.MyColor[r=206,g=209,b=218] }
+City: { name="Savannah", pos=(788,380), reach=2, pop100k=5, color=myutil.MyColor[r=192,g=220,b=196] }
+City: { name="Shreveport", pos=(662,375), reach=2, pop100k=5, color=myutil.MyColor[r=237,g=181,b=250] }
+City: { name="Springfield, MO", pos=(667,328), reach=2, pop100k=5, color=myutil.MyColor[r=236,g=184,b=245] }
+City: { name="Anchorage", pos=(101,88), reach=2, pop100k=4, color=myutil.MyColor[r=179,g=223,b=54] }
+City: { name="Brownsville", pos=(625,440), reach=2, pop100k=4, color=myutil.MyColor[r=225,g=200,b=207] }
+City: { name="Erie", pos=(799,279), reach=2, pop100k=4, color=myutil.MyColor[r=196,g=222,b=109] }
+City: { name="Green Bay", pos=(720,255), reach=2, pop100k=4, color=myutil.MyColor[r=216,g=202,b=217] }
+City: { name="Macon", pos=(766,375), reach=2, pop100k=4, color=myutil.MyColor[r=126,g=250,b=189] }
+City: { name="Manchester", pos=(886,270), reach=2, pop100k=4, color=myutil.MyColor[r=180,g=239,b=95] }
+City: { name="Montgomery", pos=(737,377), reach=2, pop100k=4, color=myutil.MyColor[r=173,g=201,b=91] }
+City: { name="Saginaw", pos=(760,266), reach=2, pop100k=4, color=myutil.MyColor[r=193,g=214,b=217] }
+City: { name="Salinas", pos=(384,333), reach=2, pop100k=4, color=myutil.MyColor[r=179,g=213,b=248] }
+City: { name="Salisbury", pos=(844,316), reach=2, pop100k=4, color=myutil.MyColor[r=200,g=218,b=193] }
+City: { name="Santa Barbara", pos=(403,356), reach=2, pop100k=4, color=myutil.MyColor[r=226,g=202,b=210] }
+City: { name="Tallahassee", pos=(757,395), reach=2, pop100k=4, color=myutil.MyColor[r=161,g=228,b=227] }
+City: { name="Victoria", pos=(630,412), reach=2, pop100k=4, color=myutil.MyColor[r=189,g=206,b=235] }
+City: { name="Amarillo", pos=(582,348), reach=2, pop100k=3, color=myutil.MyColor[r=255,g=206,b=106] }
+City: { name="Atl City", pos=(856,306), reach=2, pop100k=3, color=myutil.MyColor[r=167,g=219,b=241] }
+City: { name="Dothan", pos=(741,388), reach=2, pop100k=3, color=myutil.MyColor[r=241,g=185,b=239] }
+City: { name="Duluth", pos=(679,232), reach=2, pop100k=3, color=myutil.MyColor[r=236,g=195,b=203] }
+City: { name="Fargo", pos=(632,231), reach=2, pop100k=3, color=myutil.MyColor[r=201,g=207,b=203] }
+City: { name="Gainesville", pos=(777,403), reach=2, pop100k=3, color=myutil.MyColor[r=199,g=218,b=154] }
+City: { name="Kalamazoo", pos=(744,277), reach=2, pop100k=3, color=myutil.MyColor[r=221,g=205,b=199] }
+City: { name="Kennewick", pos=(409,238), reach=2, pop100k=3, color=myutil.MyColor[r=152,g=237,b=187] }
+City: { name="Lubbock", pos=(581,364), reach=2, pop100k=3, color=myutil.MyColor[r=192,g=212,b=235] }
+City: { name="Midland", pos=(579,380), reach=2, pop100k=3, color=myutil.MyColor[r=209,g=217,b=156] }
+City: { name="Roanoke", pos=(801,327), reach=2, pop100k=3, color=myutil.MyColor[r=211,g=195,b=249] }
+City: { name="San Luis Obispo", pos=(393,347), reach=2, pop100k=3, color=myutil.MyColor[r=163,g=222,b=225] }
+City: { name="Santa Cruz", pos=(380,330), reach=2, pop100k=3, color=myutil.MyColor[r=199,g=211,b=194] }
+City: { name="Saskatoon", pos=(533,179), reach=2, pop100k=3, color=myutil.MyColor[r=147,g=242,b=203] }
+City: { name="Sioux Falls", pos=(633,265), reach=2, pop100k=3, color=myutil.MyColor[r=204,g=206,b=208] }
+City: { name="Tyler", pos=(647,377), reach=2, pop100k=3, color=myutil.MyColor[r=217,g=195,b=227] }
+Drawing canvas was resized to (0,0)
+One-at-a-time closest-pair filling did the job using 0 map modifications.
+There are 0 pixel entries on the closest pair map.
+Drawing canvas was resized to (1088,496)
+filling voronoi map using the city New York
+filling voronoi map using the city Los Angeles
+filling voronoi map using the city Chicago
+filling voronoi map using the city DC-Baltimore
+filling voronoi map using the city Bay Area
+filling voronoi map using the city Boston
+filling voronoi map using the city Dallas-Ft. Worth
+filling voronoi map using the city Houston
+filling voronoi map using the city Miami
+filling voronoi map using the city Philadelphia
+filling voronoi map using the city Toronto-Hamilton
+filling voronoi map using the city Atlanta
+filling voronoi map using the city Detroit
+filling voronoi map using the city Phoenix
+filling voronoi map using the city Seattle
+filling voronoi map using the city Montreal
+filling voronoi map using the city Tampa Bay
+filling voronoi map using the city Twin Cities
+filling voronoi map using the city Cleveland
+filling voronoi map using the city Denver
+filling voronoi map using the city San Diego
+filling voronoi map using the city Orlando
+filling voronoi map using the city Portland
+filling voronoi map using the city St. Louis
+filling voronoi map using the city Pittsburgh
+filling voronoi map using the city Vancouver
+filling voronoi map using the city Charlotte
+filling voronoi map using the city Sacramento
+filling voronoi map using the city Columbus, OH
+filling voronoi map using the city Indianapolis
+filling voronoi map using the city Kansas City
+filling voronoi map using the city Salt Lake
+filling voronoi map using the city San Antonio
+filling voronoi map using the city Vegas
+filling voronoi map using the city Cincinnati
+filling voronoi map using the city Milwaukee
+filling voronoi map using the city NC Triangle
+filling voronoi map using the city Austin
+filling voronoi map using the city Nashville
+filling voronoi map using the city Tidewater
+filling voronoi map using the city NC Triad
+filling voronoi map using the city Providence
+filling voronoi map using the city Hartford
+filling voronoi map using the city Jaxville
+filling voronoi map using the city Louisville
+filling voronoi map using the city New Orleans
+filling voronoi map using the city Calgary
+filling voronoi map using the city Grand Rapids
+filling voronoi map using the city Memphis
+filling voronoi map using the city MPGB
+filling voronoi map using the city Oklahoma City
+filling voronoi map using the city Upstate SC
+filling voronoi map using the city Birmingham
+filling voronoi map using the city Edmonton
+filling voronoi map using the city Omaha-Lincoln
+filling voronoi map using the city Ottawa
+filling voronoi map using the city Richmond
+filling voronoi map using the city Albuquerque
+filling voronoi map using the city Buffalo
+filling voronoi map using the city Harrisburg
+filling voronoi map using the city Rochester
+filling voronoi map using the city Dayton
+filling voronoi map using the city El Paso
+filling voronoi map using the city Fresno
+filling voronoi map using the city Knoxville
+filling voronoi map using the city Tucson
+filling voronoi map using the city Tulsa
+filling voronoi map using the city Ft Myers
+filling voronoi map using the city Honolulu
+filling voronoi map using the city Bakersfield
+filling voronoi map using the city Chattanooga
+filling voronoi map using the city Columbia, SC
+filling voronoi map using the city Little Rock
+filling voronoi map using the city McAllen
+filling voronoi map using the city Baton Rouge
+filling voronoi map using the city Des Moines
+filling voronoi map using the city Madison
+filling voronoi map using the city Modesto
+filling voronoi map using the city Quebec City
+filling voronoi map using the city Winnipeg
+filling voronoi map using the city Boise
+filling voronoi map using the city Charleston, SC
+filling voronoi map using the city Charleston, WV
+filling voronoi map using the city Co Springs
+filling voronoi map using the city Huntsville
+filling voronoi map using the city Jackson
+filling voronoi map using the city Lexington
+filling voronoi map using the city South Bend
+filling voronoi map using the city Spokane
+filling voronoi map using the city Springfield, MA
+filling voronoi map using the city Syracuse
+filling voronoi map using the city Wichita
+filling voronoi map using the city Augusta, GA
+filling voronoi map using the city Ft. Wayne
+filling voronoi map using the city Portld ME
+filling voronoi map using the city Reno
+filling voronoi map using the city Space Coast
+filling voronoi map using the city Toledo
+filling voronoi map using the city Visalia
+filling voronoi map using the city Wyo Valley
+filling voronoi map using the city Columbus, GA
+filling voronoi map using the city Corpus Christi
+filling voronoi map using the city Davenport
+filling voronoi map using the city Kingsport
+filling voronoi map using the city Kitchener
+filling voronoi map using the city Lansing
+filling voronoi map using the city London
+filling voronoi map using the city Myrtle Beach
+filling voronoi map using the city Savannah
+filling voronoi map using the city Shreveport
+filling voronoi map using the city Springfield, MO
+filling voronoi map using the city Anchorage
+filling voronoi map using the city Brownsville
+filling voronoi map using the city Erie
+filling voronoi map using the city Green Bay
+filling voronoi map using the city Macon
+filling voronoi map using the city Manchester
+filling voronoi map using the city Montgomery
+filling voronoi map using the city Saginaw
+filling voronoi map using the city Salinas
+filling voronoi map using the city Salisbury
+filling voronoi map using the city Santa Barbara
+filling voronoi map using the city Tallahassee
+filling voronoi map using the city Victoria
+filling voronoi map using the city Amarillo
+filling voronoi map using the city Atl City
+filling voronoi map using the city Dothan
+filling voronoi map using the city Duluth
+filling voronoi map using the city Fargo
+filling voronoi map using the city Gainesville
+filling voronoi map using the city Kalamazoo
+filling voronoi map using the city Kennewick
+filling voronoi map using the city Lubbock
+filling voronoi map using the city Midland
+filling voronoi map using the city Roanoke
+filling voronoi map using the city San Luis Obispo
+filling voronoi map using the city Santa Cruz
+filling voronoi map using the city Saskatoon
+filling voronoi map using the city Sioux Falls
+filling voronoi map using the city Tyler
+
+
+One-at-a-time closest-pair filling did the job using 2816537 map modifications.
+There are 539648 pixel entries on the closest pair map.
+Simultaneous closest-pair filling did the job using 2276315 map modifications.
+There are 539648 pixel entries on the closest pair map.
+
+run:
+CityList:
+City: { name="New York", pos=(861,293), reach=7, pop100k=236, color=myutil.MyColor[r=176,g=186,b=175] }
+City: { name="Los Angeles", pos=(416,360), reach=6, pop100k=185, color=myutil.MyColor[r=175,g=217,b=240] }
+City: { name="Chicago", pos=(723,282), reach=5, pop100k=99, color=myutil.MyColor[r=218,g=203,b=211] }
+City: { name="DC-Baltimore", pos=(832,309), reach=5, pop100k=95, color=myutil.MyColor[r=193,g=227,b=143] }
+City: { name="Bay Area", pos=(376,322), reach=5, pop100k=83, color=myutil.MyColor[r=246,g=198,b=152] }
+City: { name="Boston", pos=(890,277), reach=5, pop100k=75, color=myutil.MyColor[r=136,g=244,b=218] }
+City: { name="Dallas-Ft. Worth", pos=(630,372), reach=5, pop100k=74, color=myutil.MyColor[r=142,g=250,b=171] }
+City: { name="Houston", pos=(646,402), reach=5, pop100k=67, color=myutil.MyColor[r=130,g=243,b=206] }
+City: { name="Miami", pos=(798,442), reach=5, pop100k=67, color=myutil.MyColor[r=231,g=190,b=247] }
+City: { name="Philadelphia", pos=(849,300), reach=5, pop100k=67, color=myutil.MyColor[r=227,g=205,b=183] }
+City: { name="Toronto-Hamilton", pos=(804,265), reach=5, pop100k=67, color=myutil.MyColor[r=203,g=206,b=245] }
+City: { name="Atlanta", pos=(756,362), reach=4, pop100k=62, color=myutil.MyColor[r=214,g=206,b=217] }
+City: { name="Detroit", pos=(769,276), reach=4, pop100k=53, color=myutil.MyColor[r=228,g=205,b=184] }
+City: { name="Phoenix", pos=(479,364), reach=4, pop100k=45, color=myutil.MyColor[r=217,g=196,b=236] }
+City: { name="Seattle", pos=(376,224), reach=4, pop100k=45, color=myutil.MyColor[r=207,g=221,b=141] }
+City: { name="Montreal", pos=(864,245), reach=4, pop100k=41, color=myutil.MyColor[r=154,g=233,b=212] }
+City: { name="Tampa Bay", pos=(774,421), reach=4, pop100k=39, color=myutil.MyColor[r=237,g=196,b=208] }
+City: { name="Twin Cities", pos=(668,250), reach=4, pop100k=38, color=myutil.MyColor[r=221,g=193,b=221] }
+City: { name="Cleveland", pos=(783,285), reach=4, pop100k=35, color=myutil.MyColor[r=181,g=227,b=187] }
+City: { name="Denver", pos=(551,302), reach=4, pop100k=33, color=myutil.MyColor[r=172,g=238,b=132] }
+City: { name="San Diego", pos=(429,372), reach=4, pop100k=33, color=myutil.MyColor[r=205,g=203,b=212] }
+City: { name="Orlando", pos=(787,416), reach=4, pop100k=31, color=myutil.MyColor[r=183,g=215,b=249] }
+City: { name="Portland", pos=(374,245), reach=4, pop100k=31, color=myutil.MyColor[r=254,g=182,b=203] }
+City: { name="St. Louis", pos=(698,314), reach=4, pop100k=29, color=myutil.MyColor[r=203,g=208,b=217] }
+City: { name="Pittsburgh", pos=(800,296), reach=3, pop100k=27, color=myutil.MyColor[r=221,g=206,b=163] }
+City: { name="Vancouver", pos=(369,207), reach=3, pop100k=26, color=myutil.MyColor[r=253,g=200,b=126] }
+City: { name="Charlotte", pos=(792,348), reach=3, pop100k=25, color=myutil.MyColor[r=211,g=209,b=212] }
+City: { name="Sacramento", pos=(385,314), reach=3, pop100k=25, color=myutil.MyColor[r=188,g=219,b=187] }
+City: { name="Columbus, OH", pos=(770,300), reach=3, pop100k=24, color=myutil.MyColor[r=236,g=192,b=211] }
+City: { name="Indianapolis", pos=(739,302), reach=3, pop100k=24, color=myutil.MyColor[r=244,g=192,b=208] }
+City: { name="Kansas City", pos=(654,309), reach=3, pop100k=24, color=myutil.MyColor[r=199,g=214,b=203] }
+City: { name="Salt Lake", pos=(481,292), reach=3, pop100k=24, color=myutil.MyColor[r=230,g=194,b=195] }
+City: { name="San Antonio", pos=(615,406), reach=3, pop100k=23, color=myutil.MyColor[r=173,g=213,b=238] }
+City: { name="Vegas", pos=(447,338), reach=3, pop100k=23, color=myutil.MyColor[r=211,g=202,b=235] }
+City: { name="Cincinnati", pos=(755,309), reach=3, pop100k=22, color=myutil.MyColor[r=217,g=198,b=194] }
+City: { name="Milwaukee", pos=(720,269), reach=3, pop100k=20, color=myutil.MyColor[r=236,g=210,b=100] }
+City: { name="NC Triangle", pos=(814,342), reach=3, pop100k=20, color=myutil.MyColor[r=219,g=196,b=248] }
+City: { name="Austin", pos=(622,397), reach=3, pop100k=19, color=myutil.MyColor[r=211,g=200,b=221] }
+City: { name="Nashville", pos=(732,338), reach=3, pop100k=19, color=myutil.MyColor[r=191,g=212,b=214] }
+City: { name="Tidewater", pos=(838,331), reach=3, pop100k=18, color=myutil.MyColor[r=206,g=212,b=168] }
+City: { name="NC Triad", pos=(800,339), reach=3, pop100k=16, color=myutil.MyColor[r=127,g=240,b=252] }
+City: { name="Providence", pos=(886,282), reach=3, pop100k=16, color=myutil.MyColor[r=190,g=212,b=220] }
+City: { name="Hartford", pos=(837,282), reach=3, pop100k=15, color=myutil.MyColor[r=164,g=222,b=234] }
+City: { name="Jaxville", pos=(783,397), reach=3, pop100k=15, color=myutil.MyColor[r=233,g=204,b=157] }
+City: { name="Louisville", pos=(743,318), reach=3, pop100k=15, color=myutil.MyColor[r=209,g=220,b=122] }
+City: { name="New Orleans", pos=(701,399), reach=3, pop100k=15, color=myutil.MyColor[r=136,g=240,b=200] }
+City: { name="Calgary", pos=(459,190), reach=3, pop100k=14, color=myutil.MyColor[r=175,g=230,b=159] }
+City: { name="Grand Rapids", pos=(743,270), reach=3, pop100k=14, color=myutil.MyColor[r=142,g=254,b=152] }
+City: { name="Memphis", pos=(700,349), reach=3, pop100k=14, color=myutil.MyColor[r=212,g=204,b=178] }
+City: { name="MPGB", pos=(719,393), reach=3, pop100k=14, color=myutil.MyColor[r=242,g=199,b=144] }
+City: { name="Oklahoma City", pos=(625,345), reach=3, pop100k=14, color=myutil.MyColor[r=239,g=187,b=242] }
+City: { name="Upstate SC", pos=(779,351), reach=3, pop100k=14, color=myutil.MyColor[r=219,g=202,b=206] }
+City: { name="Birmingham", pos=(732,365), reach=3, pop100k=13, color=myutil.MyColor[r=227,g=199,b=203] }
+City: { name="Edmonton", pos=(465,165), reach=3, pop100k=13, color=myutil.MyColor[r=215,g=215,b=149] }
+City: { name="Omaha-Lincoln", pos=(640,287), reach=3, pop100k=13, color=myutil.MyColor[r=137,g=242,b=192] }
+City: { name="Ottawa", pos=(843,246), reach=3, pop100k=13, color=myutil.MyColor[r=163,g=234,b=157] }
+City: { name="Richmond", pos=(825,325), reach=3, pop100k=13, color=myutil.MyColor[r=161,g=229,b=218] }
+City: { name="Albuquerque", pos=(534,349), reach=3, pop100k=12, color=myutil.MyColor[r=184,g=212,b=230] }
+City: { name="Buffalo", pos=(811,271), reach=3, pop100k=12, color=myutil.MyColor[r=212,g=222,b=110] }
+City: { name="Harrisburg", pos=(831,297), reach=3, pop100k=12, color=myutil.MyColor[r=175,g=186,b=167] }
+City: { name="Rochester", pos=(824,268), reach=3, pop100k=12, color=myutil.MyColor[r=225,g=195,b=208] }
+City: { name="Dayton", pos=(758,302), reach=3, pop100k=11, color=myutil.MyColor[r=170,g=247,b=88] }
+City: { name="El Paso", pos=(536,382), reach=3, pop100k=11, color=myutil.MyColor[r=203,g=209,b=181] }
+City: { name="Fresno", pos=(402,332), reach=3, pop100k=11, color=myutil.MyColor[r=206,g=209,b=197] }
+City: { name="Knoxville", pos=(761,340), reach=3, pop100k=11, color=myutil.MyColor[r=225,g=199,b=222] }
+City: { name="Tucson", pos=(491,378), reach=3, pop100k=11, color=myutil.MyColor[r=211,g=206,b=228] }
+City: { name="Tulsa", pos=(641,339), reach=3, pop100k=11, color=myutil.MyColor[r=199,g=224,b=143] }
+City: { name="Ft Myers", pos=(781,434), reach=3, pop100k=10, color=myutil.MyColor[r=233,g=198,b=192] }
+City: { name="Honolulu", pos=(22,487), reach=3, pop100k=10, color=myutil.MyColor[r=200,g=221,b=169] }
+City: { name="Bakersfield", pos=(410,347), reach=3, pop100k=9, color=myutil.MyColor[r=234,g=188,b=217] }
+City: { name="Chattanooga", pos=(748,349), reach=3, pop100k=9, color=myutil.MyColor[r=239,g=195,b=185] }
+City: { name="Columbia, SC", pos=(791,360), reach=3, pop100k=9, color=myutil.MyColor[r=218,g=206,b=202] }
+City: { name="Little Rock", pos=(676,353), reach=3, pop100k=9, color=myutil.MyColor[r=224,g=199,b=202] }
+City: { name="McAllen", pos=(618,438), reach=3, pop100k=9, color=myutil.MyColor[r=236,g=195,b=189] }
+City: { name="Baton Rouge", pos=(689,396), reach=2, pop100k=8, color=myutil.MyColor[r=171,g=223,b=236] }
+City: { name="Des Moines", pos=(664,284), reach=2, pop100k=8, color=myutil.MyColor[r=217,g=205,b=189] }
+City: { name="Madison", pos=(706,269), reach=2, pop100k=8, color=myutil.MyColor[r=200,g=212,b=211] }
+City: { name="Modesto", pos=(390,323), reach=2, pop100k=8, color=myutil.MyColor[r=175,g=213,b=234] }
+City: { name="Quebec City", pos=(888,232), reach=2, pop100k=8, color=myutil.MyColor[r=184,g=224,b=179] }
+City: { name="Winnipeg", pos=(629,201), reach=2, pop100k=8, color=myutil.MyColor[r=195,g=220,b=187] }
+City: { name="Boise", pos=(438,264), reach=2, pop100k=7, color=myutil.MyColor[r=229,g=193,b=242] }
+City: { name="Charleston, SC", pos=(800,372), reach=2, pop100k=7, color=myutil.MyColor[r=199,g=206,b=233] }
+City: { name="Charleston, WV", pos=(784,316), reach=2, pop100k=7, color=myutil.MyColor[r=207,g=221,b=114] }
+City: { name="Co Springs", pos=(552,311), reach=2, pop100k=7, color=myutil.MyColor[r=198,g=212,b=184] }
+City: { name="Huntsville", pos=(735,352), reach=2, pop100k=7, color=myutil.MyColor[r=232,g=192,b=241] }
+City: { name="Jackson", pos=(698,377), reach=2, pop100k=7, color=myutil.MyColor[r=244,g=190,b=226] }
+City: { name="Lexington", pos=(755,320), reach=2, pop100k=7, color=myutil.MyColor[r=221,g=198,b=231] }
+City: { name="South Bend", pos=(737,283), reach=2, pop100k=7, color=myutil.MyColor[r=227,g=198,b=196] }
+City: { name="Spokane", pos=(426,223), reach=2, pop100k=7, color=myutil.MyColor[r=247,g=198,b=178] }
+City: { name="Springfield, MA", pos=(875,279), reach=2, pop100k=7, color=myutil.MyColor[r=213,g=201,b=214] }
+City: { name="Syracuse", pos=(839,270), reach=2, pop100k=7, color=myutil.MyColor[r=157,g=214,b=93] }
+City: { name="Wichita", pos=(627,323), reach=2, pop100k=7, color=myutil.MyColor[r=243,g=195,b=199] }
+City: { name="Augusta, GA", pos=(779,366), reach=2, pop100k=6, color=myutil.MyColor[r=241,g=194,b=206] }
+City: { name="Ft. Wayne", pos=(749,289), reach=2, pop100k=6, color=myutil.MyColor[r=150,g=225,b=246] }
+City: { name="Portld ME", pos=(897,263), reach=2, pop100k=6, color=myutil.MyColor[r=192,g=213,b=212] }
+City: { name="Reno", pos=(402,305), reach=2, pop100k=6, color=myutil.MyColor[r=194,g=226,b=167] }
+City: { name="Space Coast", pos=(794,419), reach=2, pop100k=6, color=myutil.MyColor[r=179,g=227,b=188] }
+City: { name="Toledo", pos=(764,283), reach=2, pop100k=6, color=myutil.MyColor[r=157,g=242,b=146] }
+City: { name="Visalia", pos=(407,337), reach=2, pop100k=6, color=myutil.MyColor[r=230,g=200,b=200] }
+City: { name="Wyo Valley", pos=(842,287), reach=2, pop100k=6, color=myutil.MyColor[r=240,g=189,b=234] }
+City: { name="Columbus, GA", pos=(751,375), reach=2, pop100k=5, color=myutil.MyColor[r=241,g=190,b=234] }
+City: { name="Corpus Christi", pos=(628,422), reach=2, pop100k=5, color=myutil.MyColor[r=228,g=195,b=214] }
+City: { name="Davenport", pos=(694,284), reach=2, pop100k=5, color=myutil.MyColor[r=207,g=206,b=229] }
+City: { name="Kingsport", pos=(776,335), reach=2, pop100k=5, color=myutil.MyColor[r=221,g=205,b=191] }
+City: { name="Kitchener", pos=(795,265), reach=2, pop100k=5, color=myutil.MyColor[r=190,g=248,b=42] }
+City: { name="Lansing", pos=(754,273), reach=2, pop100k=5, color=myutil.MyColor[r=165,g=242,b=126] }
+City: { name="London", pos=(788,270), reach=2, pop100k=5, color=myutil.MyColor[r=178,g=221,b=206] }
+City: { name="Myrtle Beach", pos=(811,363), reach=2, pop100k=5, color=myutil.MyColor[r=178,g=227,b=171] }
+City: { name="Savannah", pos=(788,380), reach=2, pop100k=5, color=myutil.MyColor[r=225,g=206,b=168] }
+City: { name="Shreveport", pos=(662,375), reach=2, pop100k=5, color=myutil.MyColor[r=214,g=203,b=229] }
+City: { name="Springfield, MO", pos=(667,328), reach=2, pop100k=5, color=myutil.MyColor[r=185,g=226,b=165] }
+City: { name="Anchorage", pos=(101,88), reach=2, pop100k=4, color=myutil.MyColor[r=243,g=187,b=198] }
+City: { name="Brownsville", pos=(625,440), reach=2, pop100k=4, color=myutil.MyColor[r=215,g=200,b=199] }
+City: { name="Erie", pos=(799,279), reach=2, pop100k=4, color=myutil.MyColor[r=230,g=192,b=208] }
+City: { name="Green Bay", pos=(720,255), reach=2, pop100k=4, color=myutil.MyColor[r=225,g=200,b=187] }
+City: { name="Macon", pos=(766,375), reach=2, pop100k=4, color=myutil.MyColor[r=254,g=183,b=207] }
+City: { name="Manchester", pos=(886,270), reach=2, pop100k=4, color=myutil.MyColor[r=175,g=217,b=228] }
+City: { name="Montgomery", pos=(737,377), reach=2, pop100k=4, color=myutil.MyColor[r=185,g=212,b=243] }
+City: { name="Saginaw", pos=(760,266), reach=2, pop100k=4, color=myutil.MyColor[r=187,g=215,b=193] }
+City: { name="Salinas", pos=(384,333), reach=2, pop100k=4, color=myutil.MyColor[r=254,g=181,b=217] }
+City: { name="Salisbury", pos=(844,316), reach=2, pop100k=4, color=myutil.MyColor[r=209,g=216,b=177] }
+City: { name="Santa Barbara", pos=(403,356), reach=2, pop100k=4, color=myutil.MyColor[r=165,g=218,b=220] }
+City: { name="Tallahassee", pos=(757,395), reach=2, pop100k=4, color=myutil.MyColor[r=218,g=199,b=220] }
+City: { name="Victoria", pos=(630,412), reach=2, pop100k=4, color=myutil.MyColor[r=230,g=203,b=187] }
+City: { name="Amarillo", pos=(582,348), reach=2, pop100k=3, color=myutil.MyColor[r=193,g=212,b=238] }
+City: { name="Atl City", pos=(856,306), reach=2, pop100k=3, color=myutil.MyColor[r=181,g=212,b=235] }
+City: { name="Dothan", pos=(741,388), reach=2, pop100k=3, color=myutil.MyColor[r=206,g=217,b=179] }
+City: { name="Duluth", pos=(679,232), reach=2, pop100k=3, color=myutil.MyColor[r=199,g=217,b=200] }
+City: { name="Fargo", pos=(632,231), reach=2, pop100k=3, color=myutil.MyColor[r=215,g=212,b=174] }
+City: { name="Gainesville", pos=(777,403), reach=2, pop100k=3, color=myutil.MyColor[r=185,g=231,b=158] }
+City: { name="Kalamazoo", pos=(744,277), reach=2, pop100k=3, color=myutil.MyColor[r=190,g=206,b=232] }
+City: { name="Kennewick", pos=(409,238), reach=2, pop100k=3, color=myutil.MyColor[r=225,g=199,b=212] }
+City: { name="Lubbock", pos=(581,364), reach=2, pop100k=3, color=myutil.MyColor[r=206,g=212,b=202] }
+City: { name="Midland", pos=(579,380), reach=2, pop100k=3, color=myutil.MyColor[r=207,g=240,b=28] }
+City: { name="Roanoke", pos=(801,327), reach=2, pop100k=3, color=myutil.MyColor[r=255,g=190,b=197] }
+City: { name="San Luis Obispo", pos=(393,347), reach=2, pop100k=3, color=myutil.MyColor[r=213,g=198,b=214] }
+City: { name="Santa Cruz", pos=(380,330), reach=2, pop100k=3, color=myutil.MyColor[r=237,g=197,b=192] }
+City: { name="Saskatoon", pos=(533,179), reach=2, pop100k=3, color=myutil.MyColor[r=190,g=222,b=190] }
+City: { name="Sioux Falls", pos=(633,265), reach=2, pop100k=3, color=myutil.MyColor[r=206,g=206,b=238] }
+City: { name="Tyler", pos=(647,377), reach=2, pop100k=3, color=myutil.MyColor[r=248,g=181,b=211] }
+Drawing canvas was resized to (0,0)
+Simultaneous closest-pair filling did the job using 0 map modifications.
+There are 0 pixel entries on the closest pair map.
+Drawing canvas was resized to (1088,496)
+Simultaneous closest-pair filling did the job using 2276315 map modifications.
+There are 539648 pixel entries on the closest pair map.
+
+
+
