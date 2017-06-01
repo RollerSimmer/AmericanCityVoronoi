@@ -63,6 +63,7 @@ public class MainFrameAuto extends javax.swing.JFrame {
         shouldUseTaxicabDistCheckBox = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("American City Voronoi");
 
         jButton2.setText("Save Image");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
