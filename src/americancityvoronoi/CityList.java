@@ -8,6 +8,7 @@ package americancityvoronoi;
 import java.util.ArrayList;
 import java.util.Collections;
 import math.IntVector2;
+import myutil.MyRandom;
 
 /**
  *
@@ -31,6 +32,12 @@ public class CityList extends ArrayList<City> {
     CityList(){
         maxs=new IntVector2(Integer.MIN_VALUE,Integer.MIN_VALUE);
         mins=new IntVector2(Integer.MAX_VALUE,Integer.MAX_VALUE);        
+    }
+
+    CityList(City initialCity) {
+        this();
+        if(initialCity!=null)
+            this.add(initialCity);
     }
     
     CityList(CityList copy){
@@ -94,6 +101,15 @@ public class CityList extends ArrayList<City> {
     void sortByPopulation(){
         Collections.sort(this,POP_COMP);
     }   
+    
+    void makeCityColorsUnique(){
+        int amtPasses=3;
+        for(int pass=0;pass<amtPasses;pass++){
+            for(City c:this){
+                c.makeColorUniqueFromNeighbors();
+            }
+        }
+    }
         
     @Override
     public String toString(){
@@ -106,4 +122,70 @@ public class CityList extends ArrayList<City> {
         }
         return result;
     }    
+
+    private int calcRandomIndex() {
+        int hi=size()-1;
+        int lo=0;
+        int result = MyRandom.next(lo,hi);
+        return result;
+    }
+
+    private int calcBellRandomIndex() {
+        int hi=size()-1;
+        int lo=-hi;
+        int amtSamples=3;
+        int result = Math.abs(MyRandom.nextBell(lo,hi,amtSamples));
+        return result;
+    }
+
+    City getRandom() {
+        if(size()==0)
+            return null;
+        int pickIndex=calcRandomIndex();
+        City result=get(pickIndex);
+        return result;
+    }
+
+    City getBellRandom() {
+        if(size()==0)
+            return null;
+        int pickIndex=calcBellRandomIndex();
+        City result=get(pickIndex);
+        return result;
+    }
+
+    City popBellRandom() {
+        if(size()==0)
+            return null;
+        int pickIndex=calcBellRandomIndex();
+        City result=get(pickIndex);
+        remove(pickIndex);
+        return result;
+    }
+
+    void clearRegionDrawnFlags() {
+        for(City c: this){
+            if(c==null) continue;
+            c.hasBeenDrawnInActiveRegion=false;
+        }
+    }
+    
+    int countDrawnCities(){
+        int result=0;
+        for(City c:this){
+            if(c.hasBeenDrawnInActiveRegion)
+                result++;
+        }
+        return result;
+    }
+
+    City popAt(int index) {
+        City result=null;
+        if( index>=0 && index<size() ){
+            result=get(index);
+            remove(index);
+        }
+        return result;
+    }
+
 }

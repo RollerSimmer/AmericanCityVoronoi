@@ -3,7 +3,29 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/NorthAmericanCityListFactory.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/RegionLogic.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/myutil/MyDebug.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/CityCountryEvolver.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/myutil/MyRandom.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/NorthAmericanGeographicListFactory.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/Drawer.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/myutil/IntBounds.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/myutil/MyColor.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/GeographicRegion.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/CityConnection.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/CityPopulationComparator.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/CityVoronoiComparer.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/CityNeighborList.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/ClosestCityPair.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/ClosestCityQueueEntry.java</file>
             <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/MainFrameAuto.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/myutil/MyColorList.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/City.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/CityRegion.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/CityCountry.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/math/Point2.java</file>
+            <file>file:/home/rollersimmer/NetBeansProjects/AmericanCityVoronoi/src/americancityvoronoi/CityList.java</file>
         </group>
     </open-files>
 </project-private>

@@ -6,6 +6,7 @@
 package americancityvoronoi;
 
 import java.awt.Color;
+import math.Point2;
 import math.Point2List;
 import myutil.MyColor;
 
@@ -14,29 +15,35 @@ import myutil.MyColor;
  * @author rollersimmer
  */
 public class GeographicRegion {
+    String name;
     Point2List boundary;
     Color fillColor;
     Color strokeColor;
+    Point2 center;
     
     public GeographicRegion() {  
+        name="";
         boundary=new Point2List();
         fillColor=new Color(128);
         strokeColor=new Color(255);        
+        center=new Point2(0,0);
     }
     
-    public GeographicRegion(Color fillColor,Color strokeColor,Point2List boundary){
+    public GeographicRegion(String regionName,Color fillColor,Color strokeColor,Point2List boundary){
         this();
+        this.name=regionName;
         this.fillColor=fillColor;
         this.strokeColor=strokeColor;
         this.boundary=boundary;
+        center=findCenter();
     }
     
-    public GeographicRegion(Color fillColor,Color strokeColor,int... coords){
-        this(fillColor,strokeColor,new Point2List(coords));
+    public GeographicRegion(String regionName,Color fillColor,Color strokeColor,int... coords){
+        this(regionName,fillColor,strokeColor,new Point2List(coords));
     }    
     
-    public GeographicRegion(Color fillColor,int... coords){
-        this(fillColor,fillColor.darker(),coords);
+    public GeographicRegion(String regionName,Color fillColor,int... coords){
+        this(regionName,fillColor,fillColor.darker(),coords);
         MyColor newStrokeColor=new MyColor(strokeColor);
         strokeColor=newStrokeColor.scaleAlpha(3,1);
     }    
@@ -44,4 +51,17 @@ public class GeographicRegion {
     public void scaleAll(int scalingFactor){
         boundary.scaleAll(scalingFactor);
     }      
+
+    private Point2 findCenter() {
+        if(boundary.size()==0) return Point2.ZERO;
+        Point2 sum;
+        Point2 result;
+        sum=new Point2(0,0);
+        for(Point2 p:this.boundary){
+            sum.inc(p);
+        }
+        result=new Point2(sum);
+        result.divEqu(boundary.size());
+        return result;
+    }
 }

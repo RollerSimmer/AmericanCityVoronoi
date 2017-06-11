@@ -18,9 +18,64 @@
 20170528
 	+ researched and tested polygon drawing in java (early morning)
 	+ drew outlines of land (afternoon and night)
-todo
+20170603
+	+ drew outlines of canada and puerto rico
+	+ added puerto rican cities	
+20170605
+	+ made hash map for city lookup by position
+	+ sized hash map tile entries to 100 units both horizontally and vertically (100x100)
+	+ put cities into tiles to make searching faster
+	+ automatically linked cities using octants and quadrants
+20170606 (1)
+	+ allowed user to modify city separation distance with a text box or tick control.
+	+ add a checkbox to tell the application to only use cities separated some distance from cities already on the map
+	+ add gui controls for city map tile size, use diagonal neighbor-city directions, and max dist to scan for neighbors
+	+ drew lines between connected cities
+	+ drew those lines behind the city names
+20170606 (2)
+	+ added more waypoint cities from the united states and canada
+	+ had to update spreadsheet to adjust for new cities
+	+ changed reach to logarithm with base of 3
+20170607
+	+ ensure that two neighboring cities have distinguishable colors
+	+ made a checkbox that controls the hiding and showing of connection lines
+	+ added my own borders for american states that reflect coastlines
+	+ added waco, tx
+20170608
+	+ draft cities into regions using a similar procedure to that used for state draft
+	+ when drawing city region links, draw thick region-colored lines under the white faded lines that show all links between cities
+	+ give regions a color
+	+ found a way to limit region size by number of cities or even population (more complex)
+	+ limited region size by number of cities divided by number of regions
+20170610
+	+ use genetic algorithm to find a more optimal region layout by swapping random cities between regions every generation
+	+ remembered to avoid breaking region contiguity when swapping cities between regions
+	+ finished city country evolver using genetic algorithm
+	+ fixed region drawer by making a list of city-connections already drawn
+	+ made a CityConnection class
+20170611 (1)
+	+ added total distance from center for each region to the fitness score 
+	+ added function to merge puny neighboring regions 	
+	+ spent 14 hours coding and debugging today (yikes)
+20170611 (2)
+	+ did another city-transfer function that steps through large regions downwards and small regions upwards until a city is found that touches both cities and does not 
+	  break contiguity when removed from its old region.  gave the city to the smaller region from the larger region. 
+	+ used a nested for loop like the one used in puny merge to step through the new city transfer function
+	+ added spinner box control for max city population to be used in conjunction with the existing min city population spinner
+in-progress
+to-do
 	- draw outlines of other regions
 	- add more cities from around the world
 	- find a way to avoid writing text to the same y coord if the x coords of two cities are close
 	- add a toggle button to control whether boundaries get drawn
+	- make a button to toggle outline drawing on and off
+	- draw city names with partial opacity
+	- add borders and cities for both the caribbean and mexico
+	- have a list of universities as an alternative and do the same thing as with cities
+	- make regions of a fixed number of cities and represent them by line connections between cities
+	- make "dimensions" for elevation, ruggedness, moisture, two political axes, ethnic axes, and religious axes, in addition to cartesian x and y
+	- use dimensions to compare distance between cities in all dimensions using taxicab metric
+	- add Region comparator to sort regions by size
+	- add button to clear console output and get it to actually do what it says
+	- add spinner box controls for min and max number of generated regions
 

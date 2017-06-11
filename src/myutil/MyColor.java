@@ -12,13 +12,39 @@ import java.awt.Color;
  * @author rollersimmer
  */
 public class MyColor extends Color {
+
+    public static Color makeTransparent(Color c, int num,int denom) {
+        MyColor result=new MyColor(c);
+        result.scaleAlpha(num,denom);
+        return result;
+    }
     
+    public static int MIN_CLOSENESS = 75;
+    
+    public static boolean areColorsTooClose(MyColor c, MyColor other) {
+        int taxiDist=MyColor.calcTaxiDist(c,other);
+        boolean result=taxiDist>MIN_CLOSENESS;
+        return result;
+    }
+
+    public static int calcTaxiDist(MyColor c, MyColor other) {
+        int result=0;
+        result+=Math.abs(c.getRed()-other.getRed());
+        result+=Math.abs(c.getGreen()-other.getGreen());
+        result+=Math.abs(c.getBlue()-other.getBlue());
+        result+=Math.abs(c.getAlpha()-other.getAlpha());
+        return result;
+    }
     public MyColor(Color c){
-        super(c.getRed(),c.getGreen(),c.getBlue());
+        super(c.getRed(),c.getGreen(),c.getBlue(),c.getAlpha());
     }
     
     public MyColor(int r, int g, int b) {
         super(r, g, b);
+    }
+
+    MyColor(int r, int g, int b, int a) {
+        super(r,g,b,a);
     }
     
     public static MyColor avg(Color ca,Color cb){
@@ -41,5 +67,36 @@ public class MyColor extends Color {
         a/=denom;
         a=Math.min(a,255);
         return new Color(getRed(),getGreen(),getBlue(),a);        
+    }
+    
+    public static boolean isTooCloseToAnotherInList(MyColor c, MyColorList colors){
+        boolean result=false;
+        int dist=calcDistFromListMembers(c,colors);
+        result=dist<MIN_CLOSENESS;
+        return result;
+    }
+    
+    public static int calcDistFromListMembers(MyColor c, MyColorList colors) {
+        int result=Integer.MAX_VALUE;
+        for(MyColor other:colors){
+            int dist=MyColor.calcTaxiDist(c,other);
+            if(dist<result)
+                result=dist;
+        }
+        return result;
+    }
+    
+    @Override
+    public String toString(){
+        String result="(";
+        result+=Integer.toString(getRed());
+        result+=",";
+        result+=Integer.toString(getGreen());
+        result+=",";
+        result+=Integer.toString(getBlue());
+        result+=",";
+        result+=Integer.toString(getAlpha());
+        result+=")";
+        return result;
     }
 }

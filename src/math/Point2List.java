@@ -37,6 +37,20 @@ public class Point2List extends ArrayList<Point2> {
         for(Point2 pt:this){
             pt.scale(scalingFactor);
         }
-    }      
+    }
+    
+    public String toString(){
+        String result="Point2List: {";
+        int amtProcessed=0;
+        for(Point2 p:this){
+            result+=p.toString();
+            if(amtProcessed<size()-1)
+                result+=",";
+            amtProcessed++;
+        }
+        result+="}";
+        return result;
+    }
+    
     
 }

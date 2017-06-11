@@ -5,25 +5,32 @@
  */
 package americancityvoronoi;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontMetrics;
+import java.awt.GradientPaint;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.awt.Rectangle;
+import java.awt.Stroke;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Stack;
 import javax.imageio.ImageIO;
 import javax.swing.JComponent;
 import math.IntVector2;
 import math.Point2;
 import math.Point2List;
+import myutil.MyColor;
 import myutil.MyRandom;
 
 /**
@@ -32,6 +39,7 @@ import myutil.MyRandom;
  */
 public class Drawer extends JComponent {
     public static final int LINE_CLOSENESS_THRESHOLD=3;
+    public static boolean SHOULD_SHOW_NEIGHBOR_CONNECTIONS=true;
     private final int SQUARE_SHIFT=4;
     private final int SQUARE_SIZE=1<<SQUARE_SHIFT;
     private final int DIAGRAM_PIXEL_SIZE=3;
@@ -41,6 +49,9 @@ public class Drawer extends JComponent {
     private IntVector2 extents;
     private IntVector2 scaledExtents;
     private ClosestCityMap ccmap;
+    private CityMap cityMap;
+    private CityCountry country;    
+    private CityCountryEvolver evolver;
     
     private GeographyList geoList;
       
@@ -69,13 +80,16 @@ public class Drawer extends JComponent {
         gridColor=Color.GRAY.brighter();
         geoList=NorthAmericanGeographicListFactory.create();
         geoList.scaleAll(DIAGRAM_PIXEL_SIZE);
+        initCityNeighbors();
+        if(Drawer.SHOULD_SHOW_NEIGHBOR_CONNECTIONS)
+            initCountry();
     }
     
     private void drawCenteredText(String text,IntVector2 pos,Color color){
         FontMetrics fm=g.getFontMetrics();
         int halfWidth=fm.stringWidth(text)/2;
         int halfHeight=fm.getHeight()/2;
-        g.setColor(color);
+        g.setColor(color);        
         g.drawString(text,pos.x-halfWidth,pos.y-halfHeight);
     }
     
@@ -89,18 +103,20 @@ public class Drawer extends JComponent {
     // draw painting
     public void updatePaint(){
         this.g = img.createGraphics();
-        drawCityVoronoi();
+        drawMap();
         this.g.dispose();
         repaint();
     }    
 
-    private void drawCityVoronoi() {
+    private void drawMap() {
         if(cities.size()==0)
             return;
         drawVoronoiDiagramLines();
         drawGeographicShapes();
-        drawCityNames();
+        drawRegionConnections();
+        drawConnections();
         drawCityDots();
+        drawCityNames();
     }
 
     private void resizeCanvas() {
@@ -117,9 +133,6 @@ public class Drawer extends JComponent {
     private void drawVoronoiDiagramLines() {
         for(int y=0;y<extents.y;y++){
             for(int x=0;x<extents.x;x++){
-                if(y==60&&x==15){
-                    System.out.print("");
-                }
                 IntVector2 pos=new IntVector2(x,y);
                 ClosestCityPair ccp=this.ccmap.get(pos);
                 if(ccp==null||ccp.closestCity==null)
@@ -143,7 +156,7 @@ public class Drawer extends JComponent {
         this.g.setFont(Font.getFont(Font.MONOSPACED));
         for(City c:cities){         
             IntVector2 namePos=IntVector2.scale(c.pos,DIAGRAM_PIXEL_SIZE);
-            drawCenteredText(c.name,namePos,c.color.darker());
+            drawCenteredText(c.name,namePos,MyColor.makeTransparent(c.color.darker(),3,100));
         }
     }
 
@@ -226,6 +239,113 @@ public class Drawer extends JComponent {
     public void drawGeographicShapes() {
         for(GeographicRegion gr:geoList){
             drawOutlinedPolygon(gr.boundary,gr.fillColor,gr.strokeColor);
+        }
+    }
+
+    private void initCityNeighbors() {
+        this.cityMap=new CityMap(cities);
+        for(City c:cities){
+            c.findAndSetNeighbors(cityMap);
+        }
+        cities.makeCityColorsUnique();
+    }
+
+    private void drawCityConnection(City a, City b) {
+        IntVector2 ap=IntVector2.scale(a.pos,DIAGRAM_PIXEL_SIZE);
+        IntVector2 bp=IntVector2.scale(b.pos,DIAGRAM_PIXEL_SIZE);
+        if(Graphics2D.class.isAssignableFrom(g.getClass())){
+            Color aColor=new Color(255,255,255,255);            
+            Color bColor=new Color(255,255,255,64);            
+            ((Graphics2D)g).setPaint(new GradientPaint(ap.x,ap.y,aColor,bp.x,bp.y,bColor));                        
+        }
+        else
+            g.setColor(Color.WHITE);
+        g.drawLine(ap.x,ap.y,bp.x,bp.y);
+    }
+
+    private void drawRegionCityConnection(CityRegion rgn, City a, City b) {
+        if(a.getRegionAllegianceInCountry(country)!=rgn||b.getRegionAllegianceInCountry(country)!=rgn)
+            return;
+        IntVector2 ap=IntVector2.scale(a.pos,DIAGRAM_PIXEL_SIZE);
+        IntVector2 bp=IntVector2.scale(b.pos,DIAGRAM_PIXEL_SIZE);
+        Stroke oldStroke=null;
+        if(Graphics2D.class.isAssignableFrom(g.getClass())){
+            oldStroke=((Graphics2D)g).getStroke();
+            ((Graphics2D)g).setStroke(new BasicStroke(10));
+        }
+        g.setColor(rgn.color);
+        g.drawLine(ap.x,ap.y,bp.x,bp.y);
+        if(oldStroke!=null){
+            ((Graphics2D)g).setStroke(oldStroke);
+        }
+    }
+
+    private void drawConnections() {
+        System.out.println(cityMap.toString());
+        if(!Drawer.SHOULD_SHOW_NEIGHBOR_CONNECTIONS)
+            return;
+        for(City c:cities){
+            if(c==null||c.neighbors==null||c.neighbors.closestNeighbors==null) 
+                continue;
+            for(City n:c.neighbors.closestNeighbors.values()){
+                drawCityConnection(c,n);
+            }
+        }
+    }
+
+    private void initCountry() {
+        int amtCities=cities.size();
+        CityCountry.minRegions = (amtCities>0)? amtCities/6: 1;
+        CityCountry.maxRegions = CityCountry.minRegions*1;
+        country=new CityCountry(this.cities);
+        country.initAll();
+        country.draftAll();
+        evolver=new CityCountryEvolver(country);
+        evolver.evolveMultipleGenerations();
+        country=evolver.getBest();
+        System.out.printf("Best country after %d generations of evolution:\n",CityCountryEvolver.AMT_GENS_TO_EVOLVE_COUNTRY);        
+        country.print(); 
+        System.out.println();
+    }
+
+    private void drawRegionConnections() {  
+        if(!Drawer.SHOULD_SHOW_NEIGHBOR_CONNECTIONS)
+            return;
+        Stack<City> cityStack=new Stack<>();
+        cities.clearRegionDrawnFlags();
+        for(CityRegion rgn: country){
+            if(rgn.isEmpty())
+                continue;
+            for(City c: rgn){
+                if(c==null)
+                    continue;
+                cityStack.push(c);
+            }            
+            while(!cityStack.isEmpty()){
+                City c=cityStack.pop();
+                if(c==null||c.neighbors==null||c.neighbors.closestNeighbors==null)
+                    continue;
+                ArrayList<CityConnection> connections=new ArrayList<>();
+                for(City n:c.neighbors.closestNeighbors.values()){
+                    if(n==null)
+                        continue;
+                    //if neighbor has the same region as current, draw a line and push that vetted neighbor
+                    
+                    CityConnection curConnection=new CityConnection(c,n);
+                    CityConnection curConnectionReverse=new CityConnection(n,c);
+                    boolean shouldDraw=!connections.contains(curConnection);
+//                    if(n.getRegionAllegianceInCountry(country)==rgn&&!(n.hasBeenDrawnInActiveRegion&&c.hasBeenDrawnInActiveRegion)){
+                    if(n.getRegionAllegianceInCountry(country)==rgn&&shouldDraw){
+                        connections.add(curConnection);
+                        drawRegionCityConnection(rgn,c,n);
+                        c.hasBeenDrawnInActiveRegion=true;
+                        if(!n.hasBeenDrawnInActiveRegion){
+                            n.hasBeenDrawnInActiveRegion=true;
+                            cityStack.push(n);                        
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -38,8 +38,13 @@ public class MainFrameAuto extends javax.swing.JFrame {
         initComponents();        
         shouldUseReachCheckBox.setSelected(CityVoronoiComparer.SHOULD_REACH_PLAY_A_FACTOR);
         shouldUseTaxicabDistCheckBox.setSelected(IntVector2.IS_DEFAULT_DIST_TAXI);
-
-        initDrawer();
+        shouldUseDiagonalsCheckBox.setSelected(Drawer.SHOULD_SHOW_NEIGHBOR_CONNECTIONS);
+        shouldUseDiagonalsCheckBox.setSelected(CityNeighborList.SHOULD_USE_DIAGONAL_DIRECTIONS);
+        shouldShowConnectionsCheckBox.setSelected(Drawer.SHOULD_SHOW_NEIGHBOR_CONNECTIONS);
+        minPopSpinner.setValue(new Integer(NorthAmericanCityListFactory.MIN_POP_THRESHOLD*100000));
+        maxPopSpinner.setValue(new Integer(NorthAmericanCityListFactory.MAX_POP_THRESHOLD*100000));
+        
+//        initDrawer();
     }
 
     /**
@@ -51,43 +56,59 @@ public class MainFrameAuto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
+        saveButton = new javax.swing.JButton();
         textAreaScrollPane = new javax.swing.JScrollPane();
         textArea = new javax.swing.JTextArea();
         drawerScrollPane = new javax.swing.JScrollPane();
         drawer = new americancityvoronoi.Drawer();
-        jButton1 = new javax.swing.JButton();
+        drawButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         minPopSpinner = new javax.swing.JSpinner();
         shouldUseReachCheckBox = new javax.swing.JCheckBox();
         shouldUseTaxicabDistCheckBox = new javax.swing.JCheckBox();
+        shouldUseDiagonalsCheckBox = new javax.swing.JCheckBox();
+        gridSizeSpinner = new javax.swing.JSpinner();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        maxNeighborDistanceSpinner = new javax.swing.JSpinner();
+        shouldShowConnectionsCheckBox = new javax.swing.JCheckBox();
+        clearConsoleButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        maxPopSpinner = new javax.swing.JSpinner();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("American City Voronoi");
 
-        jButton2.setText("Save Image");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        saveButton.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        saveButton.setText("Save Image");
+        saveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                saveButtonActionPerformed(evt);
             }
         });
 
         textArea.setColumns(20);
+        textArea.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
         textArea.setRows(5);
         textAreaScrollPane.setViewportView(textArea);
 
         drawerScrollPane.setAutoscrolls(true);
+
+        drawer.setFont(new java.awt.Font("Dialog", 3, 10)); // NOI18N
         drawerScrollPane.setViewportView(drawer);
 
-        jButton1.setText("Draw");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        drawButton.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
+        drawButton.setText("Draw");
+        drawButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                drawButtonActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Min Pop");
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
+        jLabel1.setText("Min Pop:");
 
+        minPopSpinner.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
         minPopSpinner.setModel(new javax.swing.SpinnerNumberModel(500000, 100000, 20000000, 100000));
         minPopSpinner.setEditor(new javax.swing.JSpinner.NumberEditor(minPopSpinner, ""));
         minPopSpinner.setFocusable(false);
@@ -98,17 +119,67 @@ public class MainFrameAuto extends javax.swing.JFrame {
             }
         });
 
+        shouldUseReachCheckBox.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
         shouldUseReachCheckBox.setText("Use Reach?");
+        shouldUseReachCheckBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         shouldUseReachCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 shouldUseReachCheckBoxActionPerformed(evt);
             }
         });
 
+        shouldUseTaxicabDistCheckBox.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
         shouldUseTaxicabDistCheckBox.setText("Use Taxicab Distance?");
+        shouldUseTaxicabDistCheckBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         shouldUseTaxicabDistCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 shouldUseTaxicabDistCheckBoxActionPerformed(evt);
+            }
+        });
+
+        shouldUseDiagonalsCheckBox.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
+        shouldUseDiagonalsCheckBox.setText("Use Diagonal Neighbors?");
+        shouldUseDiagonalsCheckBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        gridSizeSpinner.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
+        gridSizeSpinner.setModel(new javax.swing.SpinnerNumberModel(100, 10, 300, 5));
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
+        jLabel2.setText("Search Tile Size:");
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
+        jLabel3.setText("Max Search Dist.");
+
+        maxNeighborDistanceSpinner.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
+        maxNeighborDistanceSpinner.setModel(new javax.swing.SpinnerNumberModel(7, 1, 25, 1));
+
+        shouldShowConnectionsCheckBox.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
+        shouldShowConnectionsCheckBox.setText("Show Connections?");
+        shouldShowConnectionsCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shouldShowConnectionsCheckBoxActionPerformed(evt);
+            }
+        });
+
+        clearConsoleButton.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        clearConsoleButton.setText("Clear Console");
+        clearConsoleButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearConsoleButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
+        jLabel4.setText("Max Pop:");
+
+        maxPopSpinner.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
+        maxPopSpinner.setModel(new javax.swing.SpinnerNumberModel(500000, 100000, 20000000, 100000));
+        maxPopSpinner.setEditor(new javax.swing.JSpinner.NumberEditor(maxPopSpinner, ""));
+        maxPopSpinner.setFocusable(false);
+        maxPopSpinner.setOpaque(false);
+        maxPopSpinner.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                maxPopSpinnerStateChanged(evt);
             }
         });
 
@@ -117,24 +188,42 @@ public class MainFrameAuto extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(drawerScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
+                .addComponent(drawerScrollPane)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(drawButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2))
+                        .addComponent(saveButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(clearConsoleButton))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1)
+                        .addGap(3, 3, 3)
+                        .addComponent(minPopSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(2, 2, 2)
+                        .addComponent(jLabel4)
+                        .addGap(3, 3, 3)
+                        .addComponent(maxPopSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(minPopSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14)
                         .addComponent(shouldUseReachCheckBox)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(shouldUseTaxicabDistCheckBox)))
-                .addGap(0, 390, Short.MAX_VALUE))
+                        .addComponent(shouldUseTaxicabDistCheckBox)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(shouldUseDiagonalsCheckBox)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(shouldShowConnectionsCheckBox)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(gridSizeSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(maxNeighborDistanceSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,29 +233,39 @@ public class MainFrameAuto extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(minPopSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(shouldUseReachCheckBox)
-                    .addComponent(shouldUseTaxicabDistCheckBox))
+                    .addComponent(shouldUseTaxicabDistCheckBox)
+                    .addComponent(shouldUseDiagonalsCheckBox)
+                    .addComponent(gridSizeSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(maxNeighborDistanceSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(shouldShowConnectionsCheckBox)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel4)
+                        .addComponent(maxPopSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textAreaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)
+                    .addComponent(textAreaScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 629, Short.MAX_VALUE)
                     .addComponent(drawerScrollPane))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)))
+                    .addComponent(saveButton)
+                    .addComponent(drawButton)
+                    .addComponent(clearConsoleButton)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
         // TODO add your handling code here:
         drawer.saveImage();
         outputBuffer = new String(baos.toByteArray(), StandardCharsets.UTF_8);
         textArea.setText(outputBuffer);
 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_saveButtonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void drawButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_drawButtonActionPerformed
         // TODO add your handling code here:
         initCityList();
         initDrawer();
@@ -174,7 +273,7 @@ public class MainFrameAuto extends javax.swing.JFrame {
         outputBuffer = new String(baos.toByteArray(), StandardCharsets.UTF_8);
         textArea.setText(outputBuffer);
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_drawButtonActionPerformed
 
     private void minPopSpinnerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_minPopSpinnerStateChanged
         // TODO add your handling code here:
@@ -187,6 +286,21 @@ public class MainFrameAuto extends javax.swing.JFrame {
     private void shouldUseTaxicabDistCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shouldUseTaxicabDistCheckBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_shouldUseTaxicabDistCheckBoxActionPerformed
+
+    private void shouldShowConnectionsCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shouldShowConnectionsCheckBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_shouldShowConnectionsCheckBoxActionPerformed
+
+    private void clearConsoleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearConsoleButtonActionPerformed
+        // TODO add your handling code here:
+        for(int i=0;i<50;i++){
+            System.out.println();
+        }
+    }//GEN-LAST:event_clearConsoleButtonActionPerformed
+
+    private void maxPopSpinnerStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_maxPopSpinnerStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_maxPopSpinnerStateChanged
 
     /**
      * @param args the command line arguments
@@ -227,34 +341,51 @@ public class MainFrameAuto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton clearConsoleButton;
+    private javax.swing.JButton drawButton;
     private americancityvoronoi.Drawer drawer;
     private javax.swing.JScrollPane drawerScrollPane;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JSpinner gridSizeSpinner;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JSpinner maxNeighborDistanceSpinner;
+    private javax.swing.JSpinner maxPopSpinner;
     private javax.swing.JSpinner minPopSpinner;
+    private javax.swing.JButton saveButton;
+    private javax.swing.JCheckBox shouldShowConnectionsCheckBox;
+    private javax.swing.JCheckBox shouldUseDiagonalsCheckBox;
     private javax.swing.JCheckBox shouldUseReachCheckBox;
     private javax.swing.JCheckBox shouldUseTaxicabDistCheckBox;
     private javax.swing.JTextArea textArea;
     private javax.swing.JScrollPane textAreaScrollPane;
     // End of variables declaration//GEN-END:variables
 
-    private void updateLargePopThresholdFromSpinner() {
+    private void updateMinMaxPopThresholdFromSpinner() {
         if(minPopSpinner==null) 
             return;
         Object spinnerVal=this.minPopSpinner.getValue();
         String minPopString=spinnerVal.toString();
         int minPop=Integer.parseInt(minPopString);
-        NorthAmericanCityListFactory.LARGE_POP_THRESHOLD=minPop/100000;
+        NorthAmericanCityListFactory.MIN_POP_THRESHOLD=minPop/100000;
+        spinnerVal=this.maxPopSpinner.getValue();
+        String maxPopString=spinnerVal.toString();
+        int maxPop=Integer.parseInt(maxPopString);
+        NorthAmericanCityListFactory.MAX_POP_THRESHOLD=maxPop/100000;
     }
 
     private void initCityList() {        
-        updateLargePopThresholdFromSpinner();
+        updateMinMaxPopThresholdFromSpinner();
         cities=NorthAmericanCityListFactory.create();
         cities.print();
     }
 
     private void initDrawer() {
+        CityMap.TILE_SIZE=Integer.parseInt(gridSizeSpinner.getValue().toString());
+        Drawer.SHOULD_SHOW_NEIGHBOR_CONNECTIONS=shouldShowConnectionsCheckBox.isSelected();
+        CityNeighborList.SHOULD_USE_DIAGONAL_DIRECTIONS=shouldUseDiagonalsCheckBox.isSelected();
+        CityNeighborList.MAX_NEIGHBOR_DIST=Integer.parseInt(maxNeighborDistanceSpinner.getValue().toString());
         IntVector2.IS_DEFAULT_DIST_TAXI=shouldUseTaxicabDistCheckBox.isSelected();
         CityVoronoiComparer.SHOULD_REACH_PLAY_A_FACTOR=shouldUseReachCheckBox.isSelected();
         this.drawer.init(cities);

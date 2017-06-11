@@ -10,10 +10,26 @@ package math;
  * @author rollersimmer
  */
 public enum Direction {
+    
     north,
+    northeast,
+    east,   
+    southeast,
     south,
-    east,
-    west;
+    southwest,
+    west,
+    northwest;
+    
+    public static final int AMOUNT = 8;
+    
+    public static final Direction n=north;
+    public static final Direction ne=northeast;
+    public static final Direction e=north;
+    public static final Direction se=southeast;
+    public static final Direction s=north;
+    public static final Direction sw=southwest;
+    public static final Direction w=west;
+    public static final Direction nw=northwest;
     
     public static final Direction[] VALUES=Direction.values();
 

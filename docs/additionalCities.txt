@@ -1,0 +1,155 @@
+cities to add
+missoula
+great falls
+butte
+bozeman
+idaho falls
+topeka
+twin falls
+eugene, or
+redding, ca
+elko, nv
+farmington, nm
+grand junction
+fairbanks
+juneau
+terrace, bc
+sydney, ns
+peoria, il
+rockford, il
+springfield, il
+champaign-urbana, il
+bloomington, il
+cheyenne
+lancaster, pa
+fayetteville, ar
+cedar rapids, ia
+kileen, tx
+hickory, nc
+appleton-oshkosh, wi
+clarksville, tn
+wausau, wi
+medford, or
+utica-rome, ny
+longview, tx
+fort smith, ar
+wilmington, nc
+laredo, tx
+bloomsburg, pa
+panama city+destin+ft walton beach, fl
+rocky mount, nc
+lynchburg, va
+monroe, la
+rochester, mn
+harrisonburg, va
+binghamton, ny
+lafayette, la
+college station, tx
+tuscaloosa, al
+charlottesville, va
+chico, ca
+lima, oh
+bowling green, ky
+prescott, az
+claremont, nh
+mansfield, oh
+johnstown, pa
+houma-thibodaux, la
+bloomington, in
+eau claire, wi
+bellingham, wa
+joplin, mo
+florence, sc
+lake charles, la
+yuma, az
+hilton head island, sc
+new bern, nc
+hilo, hi
+morgantown, wv
+bend, or
+elmira, ny
+blacksburg, va
+el centro, ca
+terre haute, in
+jonesboro, ar
+waterloo, ia
+kahului, hi
+Williamsport, pa
+albany, ga
+ithaca, ny
+parkersburg, ny
+wichita falls, tx
+shoals, al
+traverse city, mi
+pottsville, pa
+wheeling, wv
+homosassa springs, fl
+flagstaff, az
+la crosse, wi
+paducah, ky
+eureka, ks
+manhattan, ks
+jamestown, ny
+logan, ut
+lawton, ok
+findlay, oh
+findlay-tiffin, oh
+hot springs, ar
+jackson, tn
+pittsfield, ma
+edwards, co
+sierra vista, az
+london, ky
+carbondale, il
+altoona, pa
+goldsboro, nc
+mankato, mn
+beckley, wv
+rome, ga
+victoria, tx
+waterown, ny
+kokomo, in
+owensboro, ky
+quincy, il
+wooster, oh
+sheboygan, wi
+brunswick, ga
+wenatchee, wa
+moses lake, wa
+mount pleasant, mi
+odgensburg, ny
+decatur, il
+show low,az
+sumter, sc
+cookeville, tn
+roseburg, or
+meridian, ms
+bluefield, wv
+danville, va
+grand forks, nd
+fond du lac, wi
+tullahoma, tn
+cumberland, md
+sebring, fl
+dubuque, ia
+kalispell, mt
+clarksburg, wv
+pinehurst, nc
+brainerd, mn
+red deer, ab
+naimo, bc
+kamloops, bc
+trois-rivieres, quebec
+guelph, on
+belleville, on
+chatham-kent, on
+fredericton, nb
+chilliwack, bc
+cape breton, ns
+sarnia, on
+drummondville, qb
+saul ste. marie
+medicine hat, ab
+moncton, nb
+brantford, on
+

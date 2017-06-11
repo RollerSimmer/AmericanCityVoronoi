@@ -16,10 +16,6 @@ public class MyRandom
     {
     private static MyRandom instance=null;
 
-    public static boolean pctChance(int chancePct) {
-        return (next(1,100)<=chancePct);
-    }
-
     Random rand;
     
     protected MyRandom()
@@ -38,7 +34,7 @@ public class MyRandom
      * Generate a random integer value in a range
      * @param lo the minimum of the range set
      * @param hi the maximum of the range set
-     * @return 
+     * @return the random value
      */
     public static int next(int lo, int hi)
         {
@@ -46,6 +42,36 @@ public class MyRandom
         int n=getinstance().rand.nextInt(hi-lo+1)+lo;
         return n;
         }
+
+    /**
+     * 
+     * @param chancePct the percent chance that this will return true
+     * @return true or false randomly based on the percent chance
+     */
+    public static boolean pctChance(int chancePct) {
+        return (next(1,100)<=chancePct);
+    }
+
+    /**
+     * Generate a normally-distributed random integer value in a range
+     * @param lo the minimum of the range set
+     * @param hi the maximum of the range set
+     * @param amtBellSamples the number of random samples to average
+     * @return the random value
+     */
+    public static int nextBell(int lo, int hi, int amtBellSamples) {
+        int sum=0;
+        for(int i=0;i<amtBellSamples;i++){
+            sum+=next(lo,hi);            
+        }
+        int result=sum/amtBellSamples;
+        return result;
+    }
+
+    public static int nextBell(int lo, int hi) {
+        final int DEFAULT_AMT_BELL_SAMPLES=3;
+        return nextBell(lo,hi,DEFAULT_AMT_BELL_SAMPLES);
+    }
 
     /**
      * Generate a random letter

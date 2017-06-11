@@ -52,8 +52,7 @@ public class ClosestCityPair {
             replaceNextClosestCityWith(candidateCity);
             result=true;            
         }
-        if(closestCity==nextClosestCity)
-            System.out.print("");
+
         return result;
     }    
 
@@ -81,8 +80,6 @@ public class ClosestCityPair {
         if(closestCity==null||nextClosestCity==null||compPoint==null){
             return Integer.MAX_VALUE;
         } else {
-            if(closestCity==nextClosestCity)
-                System.out.print("");
             int result=CityVoronoiComparer.compareClosenessToPoint(closestCity,nextClosestCity,compPoint);
             return result;
         }            

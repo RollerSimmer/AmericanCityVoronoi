@@ -41,21 +41,34 @@ public class IntVector2 {
     }
     
     public static IntVector2 add(IntVector2 a,IntVector2 b){
-        IntVector2 result=a;
-        result.inc(b);
-        return result;
+        return a.add(b);
     }
     
+    public IntVector2 add(IntVector2 other){
+        IntVector2 result=new IntVector2(this);
+        result.inc(other);
+        return result;
+    }
+
     public IntVector2 dec(IntVector2 other){
         x-=other.x;
         y-=other.y;
         return this;
     }
     
+    public IntVector2 sub(IntVector2 other){
+        IntVector2 result=new IntVector2(this);
+        result.dec(other);
+        return result;
+    }
+    
     public static IntVector2 sub(IntVector2 a,IntVector2 b){
-        IntVector2 result=new IntVector2(0,0);
-        result=new IntVector2(a);
-        result.dec(b);
+        return a.sub(b);
+    }
+
+    public Point2 div(int divisor) {
+        Point2 result=new Point2(this);
+        result.divEqu(divisor);
         return result;
     }
     
@@ -97,9 +110,6 @@ public class IntVector2 {
 //        return result;
 //    } 
 
-
-
-    
     public int taxiMag() {
         int result=0;
         int ax=Math.abs(x);
@@ -170,5 +180,4 @@ public class IntVector2 {
             }
         }
     }
-
 }
