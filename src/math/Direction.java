@@ -38,4 +38,43 @@ public enum Direction {
         Direction result=Direction.values()[pickVal];
         return result;
     }
+    
+    public static IntVector2 getVector(Direction dir){
+        switch(dir){
+            case north:   
+                return new IntVector2(0,1);
+            case northeast:
+                return new IntVector2(1,1);
+            case southeast:
+                return new IntVector2(1,-1);
+            case south:
+                return new IntVector2(0,-1);
+            case southwest:
+                return new IntVector2(-1,-1);
+            case west:
+                return new IntVector2(-1,0);
+            case northwest:
+                return new IntVector2(-1,1);
+            case east   :
+            default: 
+                return new IntVector2(1,0);
+        }
+    }
+
+    
+    public static IntScale getVectorScale(Direction dir){
+        switch(dir){
+            case northeast:
+            case southeast:
+            case southwest:
+            case northwest:
+                return new IntScale(181,8);
+            case north:   
+            case east   :
+            case south:
+            case west:
+            default:
+                return new IntScale(1,0);
+        }
+    }
 }

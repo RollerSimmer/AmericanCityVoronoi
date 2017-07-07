@@ -1,0 +1,469 @@
+run:
+CityList:
+listSize=336
+City: { name="New York", pos=(859,262), reach=6, pop100k=236, color=(195,214,214,255), nbors={} }
+City: { name="Los Angeles", pos=(414,328), reach=6, pop100k=185, color=(157,234,212,255), nbors={} }
+City: { name="Chicago", pos=(722,250), reach=5, pop100k=99, color=(236,188,223,255), nbors={} }
+City: { name="DC-Baltimore", pos=(830,277), reach=5, pop100k=95, color=(207,204,248,255), nbors={} }
+City: { name="Bay Area", pos=(374,291), reach=5, pop100k=83, color=(225,197,198,255), nbors={} }
+City: { name="Boston", pos=(888,245), reach=5, pop100k=75, color=(231,185,240,255), nbors={} }
+City: { name="Dallas-Ft. Worth", pos=(627,341), reach=5, pop100k=74, color=(248,193,185,255), nbors={} }
+City: { name="Houston", pos=(645,371), reach=5, pop100k=67, color=(200,217,196,255), nbors={} }
+City: { name="Miami", pos=(796,411), reach=5, pop100k=67, color=(254,192,192,255), nbors={} }
+City: { name="Philadelphia", pos=(847,268), reach=5, pop100k=67, color=(223,213,138,255), nbors={} }
+City: { name="Toronto-Hamilton", pos=(805,232), reach=5, pop100k=67, color=(222,188,248,255), nbors={} }
+City: { name="Atlanta", pos=(754,331), reach=5, pop100k=62, color=(222,194,250,255), nbors={} }
+City: { name="Detroit", pos=(767,245), reach=5, pop100k=53, color=(185,220,206,255), nbors={} }
+City: { name="Phoenix", pos=(478,333), reach=4, pop100k=45, color=(208,206,221,255), nbors={} }
+City: { name="Seattle", pos=(375,192), reach=4, pop100k=45, color=(225,206,182,255), nbors={} }
+City: { name="Montreal", pos=(863,213), reach=4, pop100k=41, color=(221,202,212,255), nbors={} }
+City: { name="Tampa Bay", pos=(773,391), reach=4, pop100k=39, color=(164,237,177,255), nbors={} }
+City: { name="Twin Cities", pos=(667,219), reach=4, pop100k=38, color=(179,224,181,255), nbors={} }
+City: { name="Cleveland", pos=(782,254), reach=4, pop100k=35, color=(147,238,190,255), nbors={} }
+City: { name="Denver", pos=(550,271), reach=4, pop100k=33, color=(203,216,193,255), nbors={} }
+City: { name="San Diego", pos=(427,340), reach=4, pop100k=33, color=(206,203,218,255), nbors={} }
+City: { name="Orlando", pos=(785,384), reach=4, pop100k=31, color=(238,190,214,255), nbors={} }
+City: { name="Portland, OR", pos=(372,213), reach=4, pop100k=31, color=(151,245,167,255), nbors={} }
+City: { name="St. Louis", pos=(696,282), reach=4, pop100k=29, color=(150,243,171,255), nbors={} }
+City: { name="Pittsburgh", pos=(799,264), reach=4, pop100k=27, color=(236,184,242,255), nbors={} }
+City: { name="Vancouver, BC", pos=(367,176), reach=4, pop100k=26, color=(206,211,195,255), nbors={} }
+City: { name="Charlotte", pos=(790,316), reach=4, pop100k=25, color=(209,203,237,255), nbors={} }
+City: { name="Sacramento", pos=(384,283), reach=4, pop100k=25, color=(239,185,221,255), nbors={} }
+City: { name="San Juan", pos=(937,484), reach=4, pop100k=25, color=(163,235,196,255), nbors={} }
+City: { name="Columbus, OH", pos=(769,269), reach=4, pop100k=24, color=(168,204,221,255), nbors={} }
+City: { name="Indianapolis", pos=(737,271), reach=4, pop100k=24, color=(234,193,230,255), nbors={} }
+City: { name="Kansas City", pos=(653,277), reach=4, pop100k=24, color=(235,199,195,255), nbors={} }
+City: { name="Salt Lake", pos=(479,261), reach=4, pop100k=24, color=(212,208,214,255), nbors={} }
+City: { name="San Antonio", pos=(613,374), reach=4, pop100k=23, color=(163,234,203,255), nbors={} }
+City: { name="Vegas", pos=(446,306), reach=4, pop100k=23, color=(206,213,192,255), nbors={} }
+City: { name="Cincinnati", pos=(753,277), reach=4, pop100k=22, color=(212,200,248,255), nbors={} }
+City: { name="Milwaukee", pos=(719,238), reach=4, pop100k=20, color=(214,203,206,255), nbors={} }
+City: { name="NC Triangle", pos=(811,310), reach=4, pop100k=20, color=(214,206,198,255), nbors={} }
+City: { name="Austin", pos=(621,365), reach=4, pop100k=19, color=(162,245,150,255), nbors={} }
+City: { name="Nashville", pos=(731,307), reach=4, pop100k=19, color=(205,212,202,255), nbors={} }
+City: { name="Tidewater", pos=(837,300), reach=4, pop100k=18, color=(198,203,168,255), nbors={} }
+City: { name="NC Triad", pos=(798,308), reach=4, pop100k=16, color=(171,238,153,255), nbors={} }
+City: { name="Providence", pos=(884,250), reach=4, pop100k=16, color=(168,229,171,255), nbors={} }
+City: { name="Hartford", pos=(872,251), reach=3, pop100k=15, color=(166,189,220,255), nbors={} }
+City: { name="Jacksonville", pos=(782,365), reach=3, pop100k=15, color=(231,184,248,255), nbors={} }
+City: { name="Louisville", pos=(742,287), reach=3, pop100k=15, color=(221,200,200,255), nbors={} }
+City: { name="New Orleans", pos=(699,368), reach=3, pop100k=15, color=(174,240,143,255), nbors={} }
+City: { name="Calgary", pos=(458,158), reach=3, pop100k=14, color=(243,194,181,255), nbors={} }
+City: { name="Grand Rapids", pos=(742,239), reach=3, pop100k=14, color=(138,241,203,255), nbors={} }
+City: { name="Memphis", pos=(699,317), reach=3, pop100k=14, color=(251,198,166,255), nbors={} }
+City: { name="MPGB", pos=(717,362), reach=3, pop100k=14, color=(142,218,186,255), nbors={} }
+City: { name="Oklahoma City", pos=(623,314), reach=3, pop100k=14, color=(157,238,157,255), nbors={} }
+City: { name="Upstate SC", pos=(777,320), reach=3, pop100k=14, color=(206,206,211,255), nbors={} }
+City: { name="Birmingham", pos=(730,333), reach=3, pop100k=13, color=(213,201,200,255), nbors={} }
+City: { name="Edmonton", pos=(464,133), reach=3, pop100k=13, color=(206,191,152,255), nbors={} }
+City: { name="Omaha-Lincoln", pos=(635,258), reach=3, pop100k=13, color=(163,242,152,255), nbors={} }
+City: { name="Ottawa", pos=(841,214), reach=3, pop100k=13, color=(164,227,213,255), nbors={} }
+City: { name="Richmond", pos=(824,293), reach=3, pop100k=13, color=(158,238,163,255), nbors={} }
+City: { name="Albuquerque", pos=(532,317), reach=3, pop100k=12, color=(169,228,204,255), nbors={} }
+City: { name="Buffalo", pos=(810,239), reach=3, pop100k=12, color=(184,209,248,255), nbors={} }
+City: { name="Harrisburg", pos=(830,266), reach=3, pop100k=12, color=(223,199,219,255), nbors={} }
+City: { name="Rochester", pos=(822,237), reach=3, pop100k=12, color=(157,238,194,255), nbors={} }
+City: { name="Dayton", pos=(756,271), reach=3, pop100k=11, color=(226,198,206,255), nbors={} }
+City: { name="El Paso", pos=(534,350), reach=3, pop100k=11, color=(205,226,134,255), nbors={} }
+City: { name="Fresno", pos=(401,301), reach=3, pop100k=11, color=(214,206,214,255), nbors={} }
+City: { name="Knoxville", pos=(759,309), reach=3, pop100k=11, color=(231,195,231,255), nbors={} }
+City: { name="Tucson", pos=(490,347), reach=3, pop100k=11, color=(208,208,193,255), nbors={} }
+City: { name="Tulsa", pos=(639,307), reach=3, pop100k=11, color=(214,207,206,255), nbors={} }
+City: { name="Ft Myers", pos=(778,402), reach=3, pop100k=10, color=(195,217,184,255), nbors={} }
+City: { name="Honolulu", pos=(20,455), reach=3, pop100k=10, color=(108,248,238,255), nbors={} }
+City: { name="Bakersfield", pos=(408,315), reach=3, pop100k=9, color=(251,192,185,255), nbors={} }
+City: { name="Chattanooga", pos=(746,318), reach=3, pop100k=9, color=(246,184,230,255), nbors={} }
+City: { name="Columbia, SC", pos=(789,328), reach=3, pop100k=9, color=(208,202,225,255), nbors={} }
+City: { name="Little Rock", pos=(675,321), reach=3, pop100k=9, color=(193,218,196,255), nbors={} }
+City: { name="McAllen", pos=(616,406), reach=3, pop100k=9, color=(230,187,236,255), nbors={} }
+City: { name="Baton Rouge", pos=(687,364), reach=3, pop100k=8, color=(178,222,196,255), nbors={} }
+City: { name="Des Moines", pos=(662,253), reach=3, pop100k=8, color=(174,226,218,255), nbors={} }
+City: { name="Madison", pos=(704,238), reach=3, pop100k=8, color=(171,213,243,255), nbors={} }
+City: { name="Modesto", pos=(389,292), reach=3, pop100k=8, color=(232,193,190,255), nbors={} }
+City: { name="Quebec City", pos=(886,200), reach=3, pop100k=8, color=(184,212,237,255), nbors={} }
+City: { name="Winnipeg", pos=(627,169), reach=3, pop100k=8, color=(234,190,234,255), nbors={} }
+City: { name="Boise", pos=(436,232), reach=3, pop100k=7, color=(172,221,239,255), nbors={} }
+City: { name="Charleston, SC", pos=(799,340), reach=3, pop100k=7, color=(210,194,82,255), nbors={} }
+City: { name="Charleston, WV", pos=(782,285), reach=3, pop100k=7, color=(179,217,218,255), nbors={} }
+City: { name="Colorado Springs", pos=(551,280), reach=3, pop100k=7, color=(206,203,234,255), nbors={} }
+City: { name="Huntsville", pos=(733,321), reach=3, pop100k=7, color=(173,220,243,255), nbors={} }
+City: { name="Jackson", pos=(696,345), reach=3, pop100k=7, color=(211,206,222,255), nbors={} }
+City: { name="Lexington", pos=(754,288), reach=3, pop100k=7, color=(199,206,221,255), nbors={} }
+City: { name="South Bend", pos=(736,252), reach=3, pop100k=7, color=(227,212,150,255), nbors={} }
+City: { name="Spokane", pos=(424,192), reach=3, pop100k=7, color=(226,198,217,255), nbors={} }
+City: { name="Springfield, MA", pos=(873,247), reach=3, pop100k=7, color=(220,209,181,255), nbors={} }
+City: { name="Syracuse", pos=(837,238), reach=3, pop100k=7, color=(230,190,233,255), nbors={} }
+City: { name="Wichita", pos=(625,291), reach=3, pop100k=7, color=(177,232,153,255), nbors={} }
+City: { name="Augusta, GA", pos=(778,335), reach=3, pop100k=6, color=(236,191,227,255), nbors={} }
+City: { name="Ft. Wayne", pos=(747,257), reach=3, pop100k=6, color=(172,231,150,255), nbors={} }
+City: { name="Portland, ME", pos=(896,232), reach=3, pop100k=6, color=(216,202,225,255), nbors={} }
+City: { name="Reno", pos=(401,274), reach=3, pop100k=6, color=(212,223,124,255), nbors={} }
+City: { name="Space Coast", pos=(792,387), reach=3, pop100k=6, color=(221,194,223,255), nbors={} }
+City: { name="Toledo", pos=(763,252), reach=3, pop100k=6, color=(150,245,152,255), nbors={} }
+City: { name="Visalia", pos=(405,305), reach=3, pop100k=6, color=(198,211,235,255), nbors={} }
+City: { name="Wyo Valley", pos=(841,255), reach=3, pop100k=6, color=(164,222,47,255), nbors={} }
+City: { name="Fayetteville, AR", pos=(657,308), reach=3, pop100k=6, color=(248,185,213,255), nbors={} }
+City: { name="Columbus, GA", pos=(750,343), reach=2, pop100k=5, color=(225,192,243,255), nbors={} }
+City: { name="Corpus Christi", pos=(627,391), reach=2, pop100k=5, color=(174,232,145,255), nbors={} }
+City: { name="Davenport", pos=(692,253), reach=2, pop100k=5, color=(195,211,213,255), nbors={} }
+City: { name="Kingsport", pos=(774,304), reach=2, pop100k=5, color=(227,196,192,255), nbors={} }
+City: { name="Kitchener", pos=(794,234), reach=2, pop100k=5, color=(206,202,233,255), nbors={} }
+City: { name="Lansing", pos=(753,241), reach=2, pop100k=5, color=(131,247,199,255), nbors={} }
+City: { name="London", pos=(786,238), reach=2, pop100k=5, color=(221,198,240,255), nbors={} }
+City: { name="Myrtle Beach", pos=(810,331), reach=2, pop100k=5, color=(234,211,110,255), nbors={} }
+City: { name="Savannah", pos=(787,348), reach=2, pop100k=5, color=(231,200,203,255), nbors={} }
+City: { name="Shreveport", pos=(661,344), reach=2, pop100k=5, color=(227,198,214,255), nbors={} }
+City: { name="Springfield, MO", pos=(666,296), reach=2, pop100k=5, color=(239,184,230,255), nbors={} }
+City: { name="Rockford", pos=(708,246), reach=2, pop100k=5, color=(200,212,199,255), nbors={} }
+City: { name="Lancaster, PA", pos=(835,268), reach=2, pop100k=5, color=(126,255,141,255), nbors={} }
+City: { name="PCDFWB", pos=(738,365), reach=2, pop100k=5, color=(241,185,241,255), nbors={} }
+City: { name="Anchorage", pos=(100,56), reach=2, pop100k=4, color=(240,199,187,255), nbors={} }
+City: { name="Brownsville", pos=(624,408), reach=2, pop100k=4, color=(166,237,160,255), nbors={} }
+City: { name="Erie", pos=(798,247), reach=2, pop100k=4, color=(198,202,232,255), nbors={} }
+City: { name="Green Bay", pos=(719,223), reach=2, pop100k=4, color=(210,200,214,255), nbors={} }
+City: { name="Macon", pos=(764,343), reach=2, pop100k=4, color=(220,206,186,255), nbors={} }
+City: { name="Manchester", pos=(884,239), reach=2, pop100k=4, color=(190,219,192,255), nbors={} }
+City: { name="Montgomery", pos=(736,345), reach=2, pop100k=4, color=(234,190,235,255), nbors={} }
+City: { name="Ponce", pos=(932,488), reach=2, pop100k=4, color=(203,206,208,255), nbors={} }
+City: { name="Saginaw", pos=(759,234), reach=2, pop100k=4, color=(169,234,179,255), nbors={} }
+City: { name="Salinas", pos=(382,301), reach=2, pop100k=4, color=(236,198,206,255), nbors={} }
+City: { name="Salisbury", pos=(842,285), reach=2, pop100k=4, color=(120,245,251,255), nbors={} }
+City: { name="Santa Barbara", pos=(401,324), reach=2, pop100k=4, color=(206,215,187,255), nbors={} }
+City: { name="Tallahassee", pos=(756,364), reach=2, pop100k=4, color=(217,211,168,255), nbors={} }
+City: { name="Victoria", pos=(628,380), reach=2, pop100k=4, color=(193,217,190,255), nbors={} }
+City: { name="Eugene", pos=(368,228), reach=2, pop100k=4, color=(178,229,173,255), nbors={} }
+City: { name="Peoria", pos=(703,261), reach=2, pop100k=4, color=(163,232,211,255), nbors={} }
+City: { name="Cedar Rapids, IA", pos=(682,249), reach=2, pop100k=4, color=(188,213,199,255), nbors={} }
+City: { name="Kileen", pos=(621,357), reach=2, pop100k=4, color=(177,227,188,255), nbors={} }
+City: { name="Hickory, NC", pos=(785,311), reach=2, pop100k=4, color=(157,243,150,255), nbors={} }
+City: { name="Appleton-Oshkosh", pos=(713,227), reach=2, pop100k=4, color=(242,188,234,255), nbors={} }
+City: { name="Amarillo", pos=(580,316), reach=2, pop100k=3, color=(205,214,193,255), nbors={} }
+City: { name="Atlantic City", pos=(854,275), reach=2, pop100k=3, color=(223,206,193,255), nbors={} }
+City: { name="Dothan", pos=(745,356), reach=2, pop100k=3, color=(190,224,181,255), nbors={} }
+City: { name="Duluth", pos=(677,201), reach=2, pop100k=3, color=(217,165,188,255), nbors={} }
+City: { name="Fargo", pos=(630,200), reach=2, pop100k=3, color=(225,202,170,255), nbors={} }
+City: { name="Gainesville", pos=(775,372), reach=2, pop100k=3, color=(135,255,136,255), nbors={} }
+City: { name="Kalamazoo", pos=(743,245), reach=2, pop100k=3, color=(234,189,235,255), nbors={} }
+City: { name="Kennewick", pos=(407,206), reach=2, pop100k=3, color=(187,216,206,255), nbors={} }
+City: { name="Lubbock", pos=(580,333), reach=2, pop100k=3, color=(171,229,168,255), nbors={} }
+City: { name="Midland", pos=(577,348), reach=2, pop100k=3, color=(208,213,175,255), nbors={} }
+City: { name="Roanoke", pos=(799,296), reach=2, pop100k=3, color=(202,213,199,255), nbors={} }
+City: { name="San Luis Obispo", pos=(392,316), reach=2, pop100k=3, color=(189,231,152,255), nbors={} }
+City: { name="Santa Cruz", pos=(378,299), reach=2, pop100k=3, color=(111,222,223,255), nbors={} }
+City: { name="Saskatoon", pos=(532,147), reach=2, pop100k=3, color=(211,206,193,255), nbors={} }
+City: { name="Sioux Falls", pos=(631,233), reach=2, pop100k=3, color=(196,212,200,255), nbors={} }
+City: { name="Tyler", pos=(645,345), reach=2, pop100k=3, color=(212,206,216,255), nbors={} }
+City: { name="Waco", pos=(627,353), reach=2, pop100k=3, color=(182,217,236,255), nbors={} }
+City: { name="Redding", pos=(375,263), reach=2, pop100k=3, color=(230,198,217,255), nbors={} }
+City: { name="Springfield, IL", pos=(702,271), reach=2, pop100k=3, color=(149,210,180,255), nbors={} }
+City: { name="Clarksville", pos=(725,303), reach=2, pop100k=3, color=(192,205,230,255), nbors={} }
+City: { name="Wausau", pos=(702,219), reach=2, pop100k=3, color=(203,213,171,255), nbors={} }
+City: { name="Medford, OR", pos=(370,245), reach=2, pop100k=3, color=(206,206,219,255), nbors={} }
+City: { name="Utica-Rome", pos=(845,237), reach=2, pop100k=3, color=(208,204,228,255), nbors={} }
+City: { name="Longview", pos=(651,343), reach=2, pop100k=3, color=(235,192,221,255), nbors={} }
+City: { name="Fort Smith", pos=(654,315), reach=2, pop100k=3, color=(209,203,202,255), nbors={} }
+City: { name="Wilmington, NC", pos=(819,326), reach=2, pop100k=3, color=(153,230,242,255), nbors={} }
+City: { name="Laredo", pos=(604,393), reach=2, pop100k=3, color=(181,235,124,255), nbors={} }
+City: { name="Bloomsburg", pos=(834,258), reach=2, pop100k=3, color=(217,201,211,255), nbors={} }
+City: { name="Rocky Mount", pos=(821,309), reach=2, pop100k=3, color=(225,192,218,255), nbors={} }
+City: { name="Lynchburg, VA", pos=(807,294), reach=2, pop100k=3, color=(203,202,221,255), nbors={} }
+City: { name="Monroe, LA", pos=(677,343), reach=2, pop100k=3, color=(234,199,200,255), nbors={} }
+City: { name="Rochester, MN", pos=(674,228), reach=2, pop100k=3, color=(206,210,205,255), nbors={} }
+City: { name="Harrisonburg", pos=(810,284), reach=2, pop100k=3, color=(226,193,221,255), nbors={} }
+City: { name="Binghamton", pos=(839,247), reach=2, pop100k=3, color=(192,212,213,255), nbors={} }
+City: { name="Lafayette, LA", pos=(678,366), reach=2, pop100k=3, color=(219,194,234,255), nbors={} }
+City: { name="College Station", pos=(635,362), reach=2, pop100k=3, color=(228,199,203,255), nbors={} }
+City: { name="Tuscaloosa", pos=(723,336), reach=2, pop100k=3, color=(212,192,247,255), nbors={} }
+City: { name="Abilene", pos=(601,344), reach=2, pop100k=2, color=(196,206,221,255), nbors={} }
+City: { name="Albany", pos=(861,242), reach=2, pop100k=2, color=(213,202,214,255), nbors={} }
+City: { name="Alexandria, LA", pos=(674,355), reach=2, pop100k=2, color=(229,197,221,255), nbors={} }
+City: { name="Anniston-Gadsden", pos=(739,330), reach=2, pop100k=2, color=(206,206,242,255), nbors={} }
+City: { name="Bangor", pos=(911,220), reach=2, pop100k=2, color=(248,187,198,255), nbors={} }
+City: { name="Barrie", pos=(801,225), reach=2, pop100k=2, color=(143,233,248,255), nbors={} }
+City: { name="Battle Creek", pos=(747,245), reach=2, pop100k=2, color=(124,245,199,255), nbors={} }
+City: { name="Billings", pos=(513,210), reach=2, pop100k=2, color=(156,235,169,255), nbors={} }
+City: { name="Burlington", pos=(866,224), reach=2, pop100k=2, color=(206,205,241,255), nbors={} }
+City: { name="Columbia, MO", pos=(675,279), reach=2, pop100k=2, color=(223,206,194,255), nbors={} }
+City: { name="Greenville, NC", pos=(825,312), reach=2, pop100k=2, color=(189,188,215,255), nbors={} }
+City: { name="Halifax", pos=(963,222), reach=2, pop100k=2, color=(157,226,237,255), nbors={} }
+City: { name="Hattiesburg", pos=(705,355), reach=2, pop100k=2, color=(203,220,125,255), nbors={} }
+City: { name="Kelowna", pos=(404,170), reach=2, pop100k=2, color=(198,219,187,255), nbors={} }
+City: { name="Kingston", pos=(834,226), reach=2, pop100k=2, color=(233,190,230,255), nbors={} }
+City: { name="Pueblo", pos=(552,286), reach=2, pop100k=2, color=(102,217,201,255), nbors={} }
+City: { name="Rapid City", pos=(566,228), reach=2, pop100k=2, color=(219,190,246,255), nbors={} }
+City: { name="Regina", pos=(552,164), reach=2, pop100k=2, color=(205,221,89,255), nbors={} }
+City: { name="Saguenay", pos=(888,184), reach=2, pop100k=2, color=(200,198,247,255), nbors={} }
+City: { name="Sherbrooke", pos=(880,214), reach=2, pop100k=2, color=(186,213,208,255), nbors={} }
+City: { name="St. George", pos=(463,297), reach=2, pop100k=2, color=(243,188,225,255), nbors={} }
+City: { name="St. John's", pos=(1071,193), reach=2, pop100k=2, color=(123,245,220,255), nbors={} }
+City: { name="Sudbury", pos=(789,203), reach=2, pop100k=2, color=(188,218,221,255), nbors={} }
+City: { name="Texarkana", pos=(658,334), reach=2, pop100k=2, color=(236,199,188,255), nbors={} }
+City: { name="Valdosta", pos=(766,360), reach=2, pop100k=2, color=(235,190,217,255), nbors={} }
+City: { name="Yakima", pos=(393,202), reach=2, pop100k=2, color=(200,229,132,255), nbors={} }
+City: { name="Yuma", pos=(452,341), reach=2, pop100k=2, color=(220,197,212,255), nbors={} }
+City: { name="Idaho Falls", pos=(478,233), reach=2, pop100k=2, color=(212,206,179,255), nbors={} }
+City: { name="Topeka", pos=(642,278), reach=2, pop100k=2, color=(199,206,236,255), nbors={} }
+City: { name="Farmington, NM", pos=(516,301), reach=2, pop100k=2, color=(190,224,188,255), nbors={} }
+City: { name="Grand Junction", pos=(513,278), reach=2, pop100k=2, color=(206,214,184,255), nbors={} }
+City: { name="Champaign-Urbana", pos=(716,267), reach=2, pop100k=2, color=(222,203,210,255), nbors={} }
+City: { name="Bloomington, IL", pos=(709,264), reach=2, pop100k=2, color=(117,248,210,255), nbors={} }
+City: { name="Charlottesville", pos=(814,288), reach=2, pop100k=2, color=(222,206,187,255), nbors={} }
+City: { name="Chico", pos=(380,271), reach=2, pop100k=2, color=(212,208,212,255), nbors={} }
+City: { name="Lima", pos=(757,261), reach=2, pop100k=2, color=(248,184,217,255), nbors={} }
+City: { name="Bowling Green, KY", pos=(734,299), reach=2, pop100k=2, color=(152,246,171,255), nbors={} }
+City: { name="Prescott", pos=(474,323), reach=2, pop100k=2, color=(199,206,224,255), nbors={} }
+City: { name="Claremont, NH", pos=(875,235), reach=2, pop100k=2, color=(194,219,42,255), nbors={} }
+City: { name="Mansfield, OH", pos=(773,261), reach=2, pop100k=2, color=(150,234,193,255), nbors={} }
+City: { name="Johnstown, PA", pos=(809,265), reach=2, pop100k=2, color=(160,226,214,255), nbors={} }
+City: { name="Houma-Thibodaux", pos=(691,371), reach=2, pop100k=2, color=(235,195,209,255), nbors={} }
+City: { name="Bloomington, IN", pos=(733,277), reach=2, pop100k=2, color=(231,188,220,255), nbors={} }
+City: { name="Eau Claire", pos=(735,249), reach=2, pop100k=2, color=(138,235,217,255), nbors={} }
+City: { name="Bellingham", pos=(374,181), reach=2, pop100k=2, color=(232,199,190,255), nbors={} }
+City: { name="Joplin", pos=(653,298), reach=2, pop100k=2, color=(209,202,240,255), nbors={} }
+City: { name="Florence, SC", pos=(801,326), reach=2, pop100k=2, color=(248,195,150,255), nbors={} }
+City: { name="Lake Charles", pos=(666,366), reach=2, pop100k=2, color=(144,244,176,255), nbors={} }
+City: { name="Yuma", pos=(452,341), reach=2, pop100k=2, color=(208,212,200,255), nbors={} }
+City: { name="Hilton Head Island", pos=(791,346), reach=2, pop100k=2, color=(159,235,190,255), nbors={} }
+City: { name="New Bern", pos=(828,317), reach=2, pop100k=2, color=(208,212,194,255), nbors={} }
+City: { name="Hilo", pos=(48,471), reach=2, pop100k=2, color=(200,209,213,255), nbors={} }
+City: { name="Morgantown", pos=(799,272), reach=2, pop100k=2, color=(157,242,150,255), nbors={} }
+City: { name="Bend", pos=(385,228), reach=2, pop100k=2, color=(170,231,193,255), nbors={} }
+City: { name="Elmira", pos=(830,247), reach=2, pop100k=2, color=(180,211,30,255), nbors={} }
+City: { name="Blacksburg", pos=(794,296), reach=2, pop100k=2, color=(199,206,238,255), nbors={} }
+City: { name="El Centro", pos=(443,340), reach=2, pop100k=2, color=(248,188,178,255), nbors={} }
+City: { name="Terre Haute", pos=(724,274), reach=2, pop100k=2, color=(223,197,218,255), nbors={} }
+City: { name="Jonesboro", pos=(691,310), reach=2, pop100k=2, color=(220,206,200,255), nbors={} }
+City: { name="Waterloo, IA", pos=(675,243), reach=2, pop100k=2, color=(192,206,242,255), nbors={} }
+City: { name="Kahului", pos=(34,459), reach=2, pop100k=2, color=(195,211,231,255), nbors={} }
+City: { name="Williamsport", pos=(828,256), reach=2, pop100k=2, color=(104,216,195,255), nbors={} }
+City: { name="Albany, GA", pos=(757,353), reach=2, pop100k=2, color=(251,188,192,255), nbors={} }
+City: { name="Ithaca", pos=(833,244), reach=2, pop100k=2, color=(184,213,237,255), nbors={} }
+City: { name="Parkersburg, WV", pos=(783,276), reach=2, pop100k=2, color=(226,191,245,255), nbors={} }
+City: { name="Wichita Falls, TX", pos=(614,329), reach=2, pop100k=2, color=(166,220,248,255), nbors={} }
+City: { name="Shoals", pos=(722,321), reach=2, pop100k=2, color=(229,195,228,255), nbors={} }
+City: { name="Traverse City", pos=(742,221), reach=2, pop100k=2, color=(211,206,190,255), nbors={} }
+City: { name="Pottsville", pos=(836,262), reach=2, pop100k=2, color=(213,204,212,255), nbors={} }
+City: { name="Wheeling", pos=(791,268), reach=2, pop100k=2, color=(200,206,236,255), nbors={} }
+City: { name="Augusta, ME", pos=(901,225), reach=1, pop100k=1, color=(228,199,213,255), nbors={} }
+City: { name="Bismark", pos=(591,200), reach=1, pop100k=1, color=(171,226,214,255), nbors={} }
+City: { name="Cape Girardeau", pos=(703,295), reach=1, pop100k=1, color=(206,206,230,255), nbors={} }
+City: { name="Casper", pos=(535,240), reach=1, pop100k=1, color=(225,196,217,255), nbors={} }
+City: { name="Dodge City", pos=(598,291), reach=1, pop100k=1, color=(209,199,235,255), nbors={} }
+City: { name="Flagstaff", pos=(482,316), reach=1, pop100k=1, color=(203,206,224,255), nbors={} }
+City: { name="Grand Island", pos=(615,259), reach=1, pop100k=1, color=(177,218,240,255), nbors={} }
+City: { name="Lethbridge", pos=(470,171), reach=1, pop100k=1, color=(176,243,120,255), nbors={} }
+City: { name="North Platte", pos=(591,257), reach=1, pop100k=1, color=(190,219,198,255), nbors={} }
+City: { name="Peterborough", pos=(815,225), reach=1, pop100k=1, color=(192,217,199,255), nbors={} }
+City: { name="Prince George", pos=(371,129), reach=1, pop100k=1, color=(227,205,179,255), nbors={} }
+City: { name="Roswell", pos=(553,334), reach=1, pop100k=1, color=(210,207,218,255), nbors={} }
+City: { name="Saint John", pos=(938,216), reach=1, pop100k=1, color=(159,234,212,255), nbors={} }
+City: { name="San Angelo", pos=(594,354), reach=1, pop100k=1, color=(212,206,217,255), nbors={} }
+City: { name="Thunder Bay", pos=(706,184), reach=1, pop100k=1, color=(206,196,251,255), nbors={} }
+City: { name="Tupelo", pos=(711,326), reach=1, pop100k=1, color=(245,188,199,255), nbors={} }
+City: { name="Missoula", pos=(458,200), reach=1, pop100k=1, color=(245,184,248,255), nbors={} }
+City: { name="Great Falls", pos=(486,193), reach=1, pop100k=1, color=(248,181,234,255), nbors={} }
+City: { name="Butte", pos=(473,208), reach=1, pop100k=1, color=(213,198,248,255), nbors={} }
+City: { name="Bozeman", pos=(488,212), reach=1, pop100k=1, color=(176,221,234,255), nbors={} }
+City: { name="Twin Falls", pos=(454,243), reach=1, pop100k=1, color=(174,226,185,255), nbors={} }
+City: { name="Elko", pos=(441,260), reach=1, pop100k=1, color=(183,208,248,255), nbors={} }
+City: { name="Fairbanks", pos=(121,20), reach=1, pop100k=1, color=(248,190,169,255), nbors={} }
+City: { name="Juneau", pos=(254,85), reach=1, pop100k=1, color=(192,217,188,255), nbors={} }
+City: { name="Terrace", pos=(312,123), reach=1, pop100k=1, color=(210,206,217,255), nbors={} }
+City: { name="Sydney, NS", pos=(997,207), reach=1, pop100k=1, color=(251,211,73,255), nbors={} }
+City: { name="Cheyenne", pos=(550,257), reach=1, pop100k=1, color=(235,195,178,255), nbors={} }
+City: { name="Homosassa Springs", pos=(773,380), reach=1, pop100k=1, color=(189,212,239,255), nbors={} }
+City: { name="La Crosse", pos=(686,230), reach=1, pop100k=1, color=(229,190,239,255), nbors={} }
+City: { name="Paducah", pos=(712,298), reach=1, pop100k=1, color=(196,209,200,255), nbors={} }
+City: { name="Eureka, KS", pos=(636,290), reach=1, pop100k=1, color=(200,208,206,255), nbors={} }
+City: { name="Manhattan, KS", pos=(633,277), reach=1, pop100k=1, color=(206,208,195,255), nbors={} }
+City: { name="Jamestown, NY", pos=(806,247), reach=1, pop100k=1, color=(174,240,142,255), nbors={} }
+City: { name="Logan", pos=(480,251), reach=1, pop100k=1, color=(201,212,204,255), nbors={} }
+City: { name="Lawton", pos=(614,322), reach=1, pop100k=1, color=(248,188,203,255), nbors={} }
+City: { name="Findlay-Tiffin", pos=(764,258), reach=1, pop100k=1, color=(139,234,218,255), nbors={} }
+City: { name="Hot Springs", pos=(668,323), reach=1, pop100k=1, color=(203,206,212,255), nbors={} }
+City: { name="Jackson, TN", pos=(710,312), reach=1, pop100k=1, color=(187,220,184,255), nbors={} }
+City: { name="Pittsfield, MA", pos=(866,244), reach=1, pop100k=1, color=(243,192,185,255), nbors={} }
+City: { name="Edwards, CO", pos=(533,272), reach=1, pop100k=1, color=(247,181,219,255), nbors={} }
+City: { name="Sierra Vista", pos=(496,353), reach=1, pop100k=1, color=(183,230,169,255), nbors={} }
+City: { name="London, KY", pos=(758,297), reach=1, pop100k=1, color=(187,217,218,255), nbors={} }
+City: { name="Carbondale", pos=(706,291), reach=1, pop100k=1, color=(184,212,216,255), nbors={} }
+City: { name="Altoona, PA", pos=(815,263), reach=1, pop100k=1, color=(179,233,169,255), nbors={} }
+City: { name="Goldsboro", pos=(819,315), reach=1, pop100k=1, color=(243,187,196,255), nbors={} }
+City: { name="Mankato", pos=(658,227), reach=1, pop100k=1, color=(190,203,248,255), nbors={} }
+City: { name="Beckley", pos=(787,291), reach=1, pop100k=1, color=(213,202,202,255), nbors={} }
+City: { name="Rome, GA", pos=(747,326), reach=1, pop100k=1, color=(178,223,210,255), nbors={} }
+City: { name="Victoria, TX", pos=(628,380), reach=1, pop100k=1, color=(199,205,241,255), nbors={} }
+City: { name="Waterown, NY", pos=(839,229), reach=1, pop100k=1, color=(174,230,196,255), nbors={} }
+City: { name="Kokomo", pos=(737,264), reach=1, pop100k=1, color=(212,220,118,255), nbors={} }
+City: { name="Owensboro", pos=(727,291), reach=1, pop100k=1, color=(244,181,242,255), nbors={} }
+City: { name="Quincy", pos=(684,269), reach=1, pop100k=1, color=(244,191,195,255), nbors={} }
+City: { name="Wooster, OH", pos=(779,260), reach=1, pop100k=1, color=(212,206,182,255), nbors={} }
+City: { name="Sheboygan", pos=(721,231), reach=1, pop100k=1, color=(225,198,206,255), nbors={} }
+City: { name="Brunswick, GA", pos=(784,357), reach=1, pop100k=1, color=(210,212,150,255), nbors={} }
+City: { name="Wenatchee", pos=(395,194), reach=1, pop100k=1, color=(187,209,237,255), nbors={} }
+City: { name="Moses Lake", pos=(406,197), reach=1, pop100k=1, color=(250,199,115,255), nbors={} }
+City: { name="Mount Pleasant, MI", pos=(751,232), reach=1, pop100k=1, color=(160,232,187,255), nbors={} }
+City: { name="Odgensburg", pos=(844,221), reach=1, pop100k=1, color=(229,196,217,255), nbors={} }
+City: { name="Decatur, IL", pos=(709,270), reach=1, pop100k=1, color=(167,221,228,255), nbors={} }
+City: { name="Show Low", pos=(498,326), reach=1, pop100k=1, color=(203,189,156,255), nbors={} }
+City: { name="Sumter", pos=(795,329), reach=1, pop100k=1, color=(206,206,238,255), nbors={} }
+City: { name="Cookeville", pos=(743,307), reach=1, pop100k=1, color=(213,206,205,255), nbors={} }
+City: { name="Roseburg", pos=(365,236), reach=1, pop100k=1, color=(127,243,248,255), nbors={} }
+City: { name="Meridian, MS", pos=(711,345), reach=1, pop100k=1, color=(171,219,240,255), nbors={} }
+City: { name="Bluefield", pos=(786,296), reach=1, pop100k=1, color=(248,190,192,255), nbors={} }
+City: { name="Danville, VA", pos=(805,303), reach=1, pop100k=1, color=(195,206,241,255), nbors={} }
+City: { name="Grand Forks", pos=(628,189), reach=1, pop100k=1, color=(202,220,167,255), nbors={} }
+City: { name="Fond Du Lac", pos=(714,231), reach=1, pop100k=1, color=(199,206,222,255), nbors={} }
+City: { name="Tullahoma", pos=(736,315), reach=1, pop100k=1, color=(212,211,195,255), nbors={} }
+City: { name="Cumberland, MD", pos=(811,272), reach=1, pop100k=1, color=(237,185,243,255), nbors={} }
+City: { name="Sebring, FL", pos=(784,393), reach=1, pop100k=1, color=(231,199,196,255), nbors={} }
+City: { name="Dubuque", pos=(692,243), reach=1, pop100k=1, color=(211,194,247,255), nbors={} }
+City: { name="Kalispell", pos=(455,186), reach=1, pop100k=1, color=(213,200,206,255), nbors={} }
+City: { name="Clarksburg, WV", pos=(795,276), reach=1, pop100k=1, color=(255,178,234,255), nbors={} }
+City: { name="Pinehurst", pos=(804,316), reach=1, pop100k=1, color=(212,202,242,255), nbors={} }
+City: { name="Brainerd", pos=(656,205), reach=1, pop100k=1, color=(203,212,192,255), nbors={} }
+City: { name="Red Deer", pos=(460,146), reach=1, pop100k=1, color=(176,208,115,255), nbors={} }
+City: { name="Nanaimo, BC", pos=(359,177), reach=1, pop100k=1, color=(213,200,206,255), nbors={} }
+City: { name="Kamloops", pos=(395,162), reach=1, pop100k=1, color=(228,194,243,255), nbors={} }
+City: { name="Trois-Rivieres", pos=(873,205), reach=1, pop100k=1, color=(248,179,243,255), nbors={} }
+City: { name="Guelph", pos=(796,233), reach=1, pop100k=1, color=(158,234,208,255), nbors={} }
+City: { name="Belleville", pos=(825,227), reach=1, pop100k=1, color=(192,214,190,255), nbors={} }
+City: { name="Chatham-Kent", pos=(777,244), reach=1, pop100k=1, color=(186,221,212,255), nbors={} }
+City: { name="Fredericton", pos=(932,209), reach=1, pop100k=1, color=(229,183,254,255), nbors={} }
+City: { name="Chilliwack", pos=(379,177), reach=1, pop100k=1, color=(231,206,177,255), nbors={} }
+City: { name="Sarnia", pos=(774,239), reach=1, pop100k=1, color=(206,211,190,255), nbors={} }
+City: { name="Drummondville", pos=(874,210), reach=1, pop100k=1, color=(208,213,157,255), nbors={} }
+City: { name="Saul Ste. Marie", pos=(755,203), reach=1, pop100k=1, color=(225,197,221,255), nbors={} }
+City: { name="Medicine Hat", pos=(492,168), reach=1, pop100k=1, color=(205,199,243,255), nbors={} }
+City: { name="Moncton", pos=(951,208), reach=1, pop100k=1, color=(200,199,243,255), nbors={} }
+City: { name="Brantford", pos=(796,237), reach=1, pop100k=1, color=(181,224,184,255), nbors={} }
+
+north:
+  splitX=714
+  east:
+    splitY=268
+    north:
+      splitX=822
+      east:
+        splitY=232
+        north:
+          splitX=886
+          east:
+            ("Quebec City"@(886,200),"Bangor"@(911,220),"Halifax"@(963,222),"Saguenay"@(888,184),"St. John's"@(1071,193),"Augusta, ME"@(901,225),"Saint John"@(938,216),"Sydney, NS"@(997,207),"Fredericton"@(932,209),"Moncton"@(951,208))
+          west:
+            ("Montreal"@(863,213),"Ottawa"@(841,214),"Burlington"@(866,224),"Kingston"@(834,226),"Sherbrooke"@(880,214),"Waterown, NY"@(839,229),"Odgensburg"@(844,221),"Trois-Rivieres"@(873,205),"Belleville"@(825,227),"Drummondville"@(874,210))
+        south:
+          splitX=845
+          east:
+            ("New York"@(859,262),"Boston"@(888,245),"Providence"@(884,250),"Hartford"@(872,251),"Springfield, MA"@(873,247),"Portland, ME"@(896,232),"Manchester"@(884,239),"Utica-Rome"@(845,237),"Albany"@(861,242),"Claremont, NH"@(875,235),"Pittsfield, MA"@(866,244))
+          west:
+            ("Harrisburg"@(830,266),"Rochester"@(822,237),"Syracuse"@(837,238),"Wyo Valley"@(841,255),"Bloomsburg"@(834,258),"Binghamton"@(839,247),"Elmira"@(830,247),"Williamsport"@(828,256),"Ithaca"@(833,244),"Pottsville"@(836,262))
+      west:
+        splitY=244
+        north:
+          splitX=774
+          east:
+            ("Toronto-Hamilton"@(805,232),"Buffalo"@(810,239),"Kitchener"@(794,234),"London"@(786,238),"Barrie"@(801,225),"Sudbury"@(789,203),"Peterborough"@(815,225),"Guelph"@(796,233),"Sarnia"@(774,239),"Brantford"@(796,237))
+          west:
+            ("Milwaukee"@(719,238),"Grand Rapids"@(742,239),"Lansing"@(753,241),"Green Bay"@(719,223),"Saginaw"@(759,234),"Traverse City"@(742,221),"Sheboygan"@(721,231),"Mount Pleasant, MI"@(751,232),"Fond Du Lac"@(714,231),"Saul Ste. Marie"@(755,203))
+        south:
+          splitX=764
+          east:
+            ("Detroit"@(767,245),"Cleveland"@(782,254),"Pittsburgh"@(799,264),"Erie"@(798,247),"Mansfield, OH"@(773,261),"Johnstown, PA"@(809,265),"Jamestown, NY"@(806,247),"Findlay-Tiffin"@(764,258),"Altoona, PA"@(815,263),"Wooster, OH"@(779,260),"Chatham-Kent"@(777,244))
+          west:
+            ("Chicago"@(722,250),"South Bend"@(736,252),"Ft. Wayne"@(747,257),"Toledo"@(763,252),"Kalamazoo"@(743,245),"Battle Creek"@(747,245),"Champaign-Urbana"@(716,267),"Lima"@(757,261),"Eau Claire"@(735,249),"Kokomo"@(737,264))
+    south:
+      splitX=784
+      east:
+        splitY=310
+        north:
+          splitX=810
+          east:
+            ("DC-Baltimore"@(830,277),"Philadelphia"@(847,268),"Tidewater"@(837,300),"Richmond"@(824,293),"Lancaster, PA"@(835,268),"Salisbury"@(842,285),"Atlantic City"@(854,275),"Rocky Mount"@(821,309),"Harrisonburg"@(810,284),"Charlottesville"@(814,288),"Cumberland, MD"@(811,272))
+          west:
+            ("NC Triad"@(798,308),"Roanoke"@(799,296),"Lynchburg, VA"@(807,294),"Morgantown"@(799,272),"Blacksburg"@(794,296),"Wheeling"@(791,268),"Beckley"@(787,291),"Bluefield"@(786,296),"Danville, VA"@(805,303),"Clarksburg, WV"@(795,276))
+        south:
+          splitX=799
+          east:
+            ("San Juan"@(937,484),"NC Triangle"@(811,310),"Charleston, SC"@(799,340),"Myrtle Beach"@(810,331),"Ponce"@(932,488),"Wilmington, NC"@(819,326),"Greenville, NC"@(825,312),"Florence, SC"@(801,326),"New Bern"@(828,317),"Goldsboro"@(819,315),"Pinehurst"@(804,316))
+          west:
+            ("Miami"@(796,411),"Orlando"@(785,384),"Charlotte"@(790,316),"Columbia, SC"@(789,328),"Space Coast"@(792,387),"Savannah"@(787,348),"Hickory, NC"@(785,311),"Hilton Head Island"@(791,346),"Brunswick, GA"@(784,357),"Sumter"@(795,329),"Sebring, FL"@(784,393))
+      west:
+        splitY=321
+        north:
+          splitX=746
+          east:
+            ("Columbus, OH"@(769,269),"Cincinnati"@(753,277),"Upstate SC"@(777,320),"Dayton"@(756,271),"Knoxville"@(759,309),"Chattanooga"@(746,318),"Charleston, WV"@(782,285),"Lexington"@(754,288),"Kingsport"@(774,304),"Parkersburg, WV"@(783,276),"London, KY"@(758,297))
+          west:
+            ("Indianapolis"@(737,271),"Nashville"@(731,307),"Louisville"@(742,287),"Clarksville"@(725,303),"Bowling Green, KY"@(734,299),"Bloomington, IN"@(733,277),"Terre Haute"@(724,274),"Owensboro"@(727,291),"Cookeville"@(743,307),"Tullahoma"@(736,315))
+        south:
+          splitX=754
+          east:
+            ("Atlanta"@(754,331),"Tampa Bay"@(773,391),"Jacksonville"@(782,365),"Ft Myers"@(778,402),"Augusta, GA"@(778,335),"Macon"@(764,343),"Tallahassee"@(756,364),"Gainesville"@(775,372),"Valdosta"@(766,360),"Albany, GA"@(757,353),"Homosassa Springs"@(773,380))
+          west:
+            ("MPGB"@(717,362),"Birmingham"@(730,333),"Huntsville"@(733,321),"Columbus, GA"@(750,343),"PCDFWB"@(738,365),"Montgomery"@(736,345),"Dothan"@(745,356),"Tuscaloosa"@(723,336),"Anniston-Gadsden"@(739,330),"Shoals"@(722,321),"Rome, GA"@(747,326))
+  west:
+    splitY=282
+    north:
+      splitX=513
+      east:
+        splitY=243
+        north:
+          splitX=656
+          east:
+            ("Twin Cities"@(667,219),"Madison"@(704,238),"Appleton-Oshkosh"@(713,227),"Duluth"@(677,201),"Wausau"@(702,219),"Rochester, MN"@(674,228),"Thunder Bay"@(706,184),"La Crosse"@(686,230),"Mankato"@(658,227),"Brainerd"@(656,205))
+          west:
+            ("Winnipeg"@(627,169),"Fargo"@(630,200),"Saskatoon"@(532,147),"Sioux Falls"@(631,233),"Billings"@(513,210),"Rapid City"@(566,228),"Regina"@(552,164),"Bismark"@(591,200),"Casper"@(535,240),"Grand Forks"@(628,189))
+        south:
+          splitX=662
+          east:
+            ("Des Moines"@(662,253),"Davenport"@(692,253),"Rockford"@(708,246),"Peoria"@(703,261),"Cedar Rapids, IA"@(682,249),"Springfield, IL"@(702,271),"Columbia, MO"@(675,279),"Bloomington, IL"@(709,264),"Waterloo, IA"@(675,243),"Quincy"@(684,269),"Decatur, IL"@(709,270),"Dubuque"@(692,243))
+          west:
+            ("Denver"@(550,271),"Kansas City"@(653,277),"Omaha-Lincoln"@(635,258),"Colorado Springs"@(551,280),"Topeka"@(642,278),"Grand Junction"@(513,278),"Grand Island"@(615,259),"North Platte"@(591,257),"Cheyenne"@(550,257),"Manhattan, KS"@(633,277),"Edwards, CO"@(533,272))
+      west:
+        splitY=194
+        north:
+          splitX=395
+          east:
+            ("Calgary"@(458,158),"Edmonton"@(464,133),"Spokane"@(424,192),"Kelowna"@(404,170),"Lethbridge"@(470,171),"Great Falls"@(486,193),"Kalispell"@(455,186),"Red Deer"@(460,146),"Kamloops"@(395,162),"Medicine Hat"@(492,168))
+          west:
+            ("Seattle"@(375,192),"Vancouver, BC"@(367,176),"Anchorage"@(100,56),"Bellingham"@(374,181),"Prince George"@(371,129),"Fairbanks"@(121,20),"Juneau"@(254,85),"Terrace"@(312,123),"Nanaimo, BC"@(359,177),"Chilliwack"@(379,177))
+        south:
+          splitX=406
+          east:
+            ("Salt Lake"@(479,261),"Boise"@(436,232),"Kennewick"@(407,206),"Idaho Falls"@(478,233),"Missoula"@(458,200),"Butte"@(473,208),"Bozeman"@(488,212),"Twin Falls"@(454,243),"Elko"@(441,260),"Logan"@(480,251),"Moses Lake"@(406,197))
+          west:
+            ("Portland, OR"@(372,213),"Reno"@(401,274),"Eugene"@(368,228),"Redding"@(375,263),"Medford, OR"@(370,245),"Yakima"@(393,202),"Chico"@(380,271),"Bend"@(385,228),"Wenatchee"@(395,194),"Roseburg"@(365,236))
+    south:
+      splitX=621
+      east:
+        splitY=343
+        north:
+          splitX=668
+          east:
+            ("St. Louis"@(696,282),"Memphis"@(699,317),"Little Rock"@(675,321),"Jonesboro"@(691,310),"Cape Girardeau"@(703,295),"Tupelo"@(711,326),"Paducah"@(712,298),"Hot Springs"@(668,323),"Jackson, TN"@(710,312),"Carbondale"@(706,291))
+          west:
+            ("Dallas-Ft. Worth"@(627,341),"Oklahoma City"@(623,314),"Tulsa"@(639,307),"Wichita"@(625,291),"Fayetteville, AR"@(657,308),"Springfield, MO"@(666,296),"Fort Smith"@(654,315),"Texarkana"@(658,334),"Joplin"@(653,298),"Eureka, KS"@(636,290))
+        south:
+          splitX=661
+          east:
+            ("New Orleans"@(699,368),"Baton Rouge"@(687,364),"Jackson"@(696,345),"Shreveport"@(661,344),"Monroe, LA"@(677,343),"Lafayette, LA"@(678,366),"Alexandria, LA"@(674,355),"Hattiesburg"@(705,355),"Houma-Thibodaux"@(691,371),"Lake Charles"@(666,366),"Meridian, MS"@(711,345))
+          west:
+            ("Houston"@(645,371),"Austin"@(621,365),"Corpus Christi"@(627,391),"Brownsville"@(624,408),"Victoria"@(628,380),"Kileen"@(621,357),"Tyler"@(645,345),"Waco"@(627,353),"Longview"@(651,343),"College Station"@(635,362),"Victoria, TX"@(628,380))
+      west:
+        splitY=328
+        north:
+          splitX=446
+          east:
+            ("Vegas"@(446,306),"Albuquerque"@(532,317),"Amarillo"@(580,316),"Pueblo"@(552,286),"St. George"@(463,297),"Farmington, NM"@(516,301),"Prescott"@(474,323),"Dodge City"@(598,291),"Flagstaff"@(482,316),"Lawton"@(614,322),"Show Low"@(498,326))
+          west:
+            ("Bay Area"@(374,291),"Sacramento"@(384,283),"Fresno"@(401,301),"Bakersfield"@(408,315),"Modesto"@(389,292),"Visalia"@(405,305),"Salinas"@(382,301),"Santa Barbara"@(401,324),"San Luis Obispo"@(392,316),"Santa Cruz"@(378,299))
+        south:
+          splitX=496
+          east:
+            ("San Antonio"@(613,374),"El Paso"@(534,350),"McAllen"@(616,406),"Lubbock"@(580,333),"Midland"@(577,348),"Laredo"@(604,393),"Abilene"@(601,344),"Wichita Falls, TX"@(614,329),"Roswell"@(553,334),"San Angelo"@(594,354),"Sierra Vista"@(496,353))
+          west:
+            ("Los Angeles"@(414,328),"Phoenix"@(478,333),"San Diego"@(427,340),"Tucson"@(490,347),"Honolulu"@(20,455),"Yuma"@(452,341),"Yuma"@(452,341),"Hilo"@(48,471),"El Centro"@(443,340),"Kahului"@(34,459))
+
+BUILD SUCCESSFUL (total time: 0 seconds)
+

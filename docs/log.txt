@@ -62,7 +62,24 @@
 	  break contiguity when removed from its old region.  gave the city to the smaller region from the larger region. 
 	+ used a nested for loop like the one used in puny merge to step through the new city transfer function
 	+ added spinner box control for max city population to be used in conjunction with the existing min city population spinner
-in-progress
+20170617
+	+ added TileSplit classes for dividing up the map into alternating binary tree tiles to find regional centers
+20170618
+	+ unit-tested median and got it to work
+	+ added a method to branch all in both EW tile splits and NS tile splits
+	+ added direction field to TileSplit superclass
+20170619
+	+ successfully unit tested EWTileSplit and NSTileSplit
+20170620
+	+ add "squareness" (closeness of width to height) to region fitness score
+	+ used TileSplit tree to divide map into equally distributed regions for finding region centers that avoid large city isolation.
+	+ cleaned up the code a little and added dynamic change delta for country evolution.
+20170621	
+	+ made city tree splitter more dynamic so that it splits the largest dimension
+20170703
+	+ loaded location lists from a text file
+	+ finished list of major universities
+	+ added a secondary color to location	
 to-do
 	- draw outlines of other regions
 	- add more cities from around the world
@@ -78,4 +95,8 @@ to-do
 	- add Region comparator to sort regions by size
 	- add button to clear console output and get it to actually do what it says
 	- add spinner box controls for min and max number of generated regions
+	- find cities that are much further from their region's center than other region members and see if there is a more suitable region in which to place them
+	- change city's class name to something more suitable to general location class 
+	- correct some college locations (penn for one)
+	- fix octogonal distance so that it no longer produces "bars" in regions.
 

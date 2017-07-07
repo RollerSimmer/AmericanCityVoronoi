@@ -5,7 +5,9 @@
  */
 package americancityvoronoi;
 
+import java.awt.Dimension;
 import java.util.ArrayList;
+import math.Direction;
 import math.IntVector2;
 import math.Point2;
 import myutil.MyColor;
@@ -31,7 +33,14 @@ public class CityRegion extends CityList {
         coordSum=new Point2(0,0);
         centerPos=new Point2(0,0);
         parentCountry=null;
-        color=null;
+    }
+    
+    public CityRegion(CityCountry parentCountry){
+        this();
+        this.parentCountry=parentCountry;
+        int light1000ForRegions=250;
+        this.color=MyColorFactory.createColorUniqueFromList(parentCountry.getRegionColorList(),light1000ForRegions);
+        this.color.scaleAlpha(1,2);
     }
     
     public CityRegion(City initialCity){
@@ -40,11 +49,8 @@ public class CityRegion extends CityList {
     }
     
     public CityRegion(City initialCity,CityCountry parentCountry){
-        this();
-        this.parentCountry=parentCountry;
+        this(parentCountry);
         add(initialCity);
-        int light1000ForRegions=250;
-        this.color=MyColorFactory.createColorUniqueFromList(parentCountry.getRegionColorList(),light1000ForRegions);
     }
     
     /**
@@ -56,9 +62,9 @@ public class CityRegion extends CityList {
     public CityRegion(CityRegion copy,CityCountry parentCountry){
         this();
         this.parentCountry=parentCountry;
-        this.centerPos=copy.centerPos;
-        this.coordSum=copy.coordSum;
-        this.color=copy.color;
+        this.centerPos=new Point2(copy.centerPos);
+        this.coordSum=new Point2(copy.coordSum);
+        this.color=new MyColor(copy.color);
         for(City c:copy){
             c.setRegionAllegianceInCountry(this, this.parentCountry);            
             this.add(c);
@@ -126,7 +132,7 @@ public class CityRegion extends CityList {
             for(City n: c.neighbors.closestNeighbors.values()){
                 if(n==null||!RegionLogic.logicOp(n.getRegionAllegianceInCountry(parentCountry),region,logic))
                     continue;
-                int nDist=IntVector2.dist(centerPos,n.pos);
+                int nDist=IntVector2.defaultDist(centerPos,n.pos);
                 if(nDist<closestDist){
                     closestDist=nDist;
                     result=n;
@@ -137,12 +143,9 @@ public class CityRegion extends CityList {
     }
 
     int calcDistToCity(City c) {
-        int result=Integer.MAX_VALUE;
-        if(c==null||this.centerPos==null)
-            return result;
-        result=IntVector2.dist(c.pos,centerPos);
-        return result;
+        return calcDistToClosestCityInRegion(c);
     }
+    
 
     boolean isConnectedToCity(City c) {
         if(c==null)
@@ -159,8 +162,8 @@ public class CityRegion extends CityList {
     boolean isEligibleForCityConnection(City c, int maxCitiesPerRegion) {
         if(!isConnectedToCity(c))
             return false;
-        if(size()>=maxCitiesPerRegion)
-            return false;
+//        if(size()+1 > maxCitiesPerRegion)
+//            return false;
         return true;
     }
     
@@ -262,7 +265,7 @@ public class CityRegion extends CityList {
             return 0;
         int distSum=0;
         for(City c:this){
-            int dist=IntVector2.dist(c.pos,this.centerPos);
+            int dist=IntVector2.defaultDist(c.pos,this.centerPos);
             distSum+=dist;
         }
         int result=distSum/size();
@@ -333,6 +336,59 @@ public class CityRegion extends CityList {
         } catch(NullPointerException ex) {
             return null;
         }
+    }
+
+    private int calcDistToClosestCityInRegion(City c) {
+        City rc=this.findClosestCityToOutsideCity(c);
+        if(rc==null)
+            return Integer.MAX_VALUE;
+        return City.dist(c,rc);
+    }
+
+    private City findClosestCityToOutsideCity(City c) {
+        if(this.contains(c))
+            return c;
+        City result=null;
+        int closestDist=Integer.MAX_VALUE;
+        for(City rc:this){
+            int dist=City.dist(c,rc);
+            if(dist<closestDist){
+                closestDist=dist;
+                result=rc;
+            }
+        }
+        return result;
+    }
+    
+    public int calcInverseSquareness(Direction iDir,Direction jDir){
+        int i=calcProjectionWidthAlongDirection(iDir);
+        int j=calcProjectionWidthAlongDirection(jDir);
+        int result=Math.abs(i-j);
+        return result;
+    }
+
+    public int calcStandardInverseSquareness() {
+        int orthoSquarenessTerm=calcInverseSquareness(Direction.south, Direction.east);
+        int diagSquarenessTerm=calcInverseSquareness(Direction.southeast, Direction.southwest);
+        int result=Math.max(orthoSquarenessTerm, diagSquarenessTerm);
+        return result;
+    }
+
+    private int calcProjectionWidthAlongDirection(Direction dir) {
+        int xPrime=0;
+        int maxXPrime=Integer.MIN_VALUE;
+        int minXPrime=Integer.MAX_VALUE;
+        for(City c: this){
+            xPrime=IntVector2.dotProduct(c.pos,Direction.getVector(dir),Direction.getVectorScale(dir));
+            if(xPrime>maxXPrime)
+                maxXPrime=xPrime;
+            if(xPrime<minXPrime)
+                minXPrime=xPrime;
+        }
+        if(maxXPrime==Integer.MIN_VALUE&&minXPrime==Integer.MAX_VALUE)
+            return 0;
+        int result = maxXPrime-minXPrime;
+        return result;
     }
 
 }

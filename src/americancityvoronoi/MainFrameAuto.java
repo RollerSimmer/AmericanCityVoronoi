@@ -378,7 +378,8 @@ public class MainFrameAuto extends javax.swing.JFrame {
 
     private void initCityList() {        
         updateMinMaxPopThresholdFromSpinner();
-        cities=NorthAmericanCityListFactory.create();
+        cities=LocationLoader.createFromFile("data/locations.dat");
+//        cities=NorthAmericanCityListFactory.create();
         cities.print();
     }
 

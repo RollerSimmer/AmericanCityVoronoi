@@ -16,10 +16,10 @@ import myutil.MyRandom;
  */
 public class CityCountryEvolver extends ArrayList<CityCountry> {
     
-    public final int TARGET_POPULATION=5;
-    public final int MAX_POPULATION=TARGET_POPULATION*2;    
+    public final int TARGET_POPULATION=4;
+    public final int MAX_POPULATION=TARGET_POPULATION*4;    
     boolean isDirty;
-    public static int AMT_GENS_TO_EVOLVE_COUNTRY=2000;
+    public static int AMT_GENS_TO_EVOLVE_COUNTRY=200;
     
     public CityCountryEvolver() {
         super();
@@ -37,7 +37,7 @@ public class CityCountryEvolver extends ArrayList<CityCountry> {
         Collections.sort(this,new CityCountryFitnessComparator());
         isDirty=false;
     }
- 
+
     private static class CityCountryFitnessComparator implements Comparator<CityCountry> {        
         @Override
         public int compare(CityCountry a, CityCountry b) {
@@ -48,6 +48,12 @@ public class CityCountryEvolver extends ArrayList<CityCountry> {
         }
     }
     
+    private int getBestBalance() {
+        CityCountry best=this.getBest();
+        int result=best.calcFitness();
+        return result;
+    }
+ 
     public void spawnFromParent(){
         if(size()==0)
             return;
@@ -95,10 +101,33 @@ public class CityCountryEvolver extends ArrayList<CityCountry> {
     
     public void evolveMultipleGenerations(int amtGens){
 //        print();
-        for(int g=0;g<amtGens;g++){
-            evolveSingleGeneration();  
-//            print();
+        if(amtGens==0)
+            return;
+        int lastBal=getBestBalance();
+        evolveSingleGeneration();
+        int curBal=getBestBalance();
+        int balDelta=curBal-lastBal;
+        final int CHANGE_THRESHOLD = -CityCountry.FITNESS_SCALE/200 ;  //each generation must improve by at least this much
+        int gen=1;
+        int improvementFailureCount=0;
+        boolean doFirstTwoMatch = (size()>1)? (get(0).calcFitness()==get(1).calcFitness()): (size()==1);
+        while((curBal>0) && (balDelta<=CHANGE_THRESHOLD || !doFirstTwoMatch || balDelta==0)){
+            lastBal=curBal;
+            evolveSingleGeneration();
+            curBal=getBestBalance();
+            balDelta=curBal-lastBal;
+            ++gen;
+            if(gen>=amtGens)
+                break;
+            if(balDelta==0)
+                improvementFailureCount++;
+            doFirstTwoMatch = (size()>1)? (get(0).calcFitness()==get(1).calcFitness()): (true);
         }
+        System.out.printf("Evolved country %d generations.  Failed to improve %d times.\n",gen,improvementFailureCount);
+//        for(int g=0;g<amtGens;g++){
+//            evolveSingleGeneration();  
+//            print();
+//        }
         print();
     }
     

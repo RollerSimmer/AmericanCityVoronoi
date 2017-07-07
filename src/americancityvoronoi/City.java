@@ -19,6 +19,16 @@ import myutil.MyColorList;
 public class City {
     public static final int CITY_COLOR_LIGHT=800;  // out of 1000
 
+    public String name;
+    public Point2 pos;
+    public int reach;
+    public int pop100k;
+    MyColor primary;
+    MyColor secondary;
+    CityNeighborList neighbors;
+    HashMap<CityCountry,CityRegion> regionAllegiances;
+    boolean hasBeenDrawnInActiveRegion;
+
     static boolean doCitiesShareRegionAllegianceInCountry(City a, City b, CityCountry country) {
         try{
             if(a.getRegionAllegianceInCountry(country)==null)
@@ -29,15 +39,6 @@ public class City {
         }
         return false;
     }
-
-    public String name;
-    public Point2 pos;
-    public int reach;
-    public int pop100k;
-    MyColor color;
-    CityNeighborList neighbors;
-    HashMap<CityCountry,CityRegion> regionAllegiances;
-    boolean hasBeenDrawnInActiveRegion;
     
     public City(String name,Point2 pos,int reach,int pop100k){
         this.name=name;
@@ -48,11 +49,20 @@ public class City {
         this.regionAllegiances=new HashMap<>();
         this.hasBeenDrawnInActiveRegion=false;
         
-        color=MyColorFactory.createRandomly(CITY_COLOR_LIGHT);
+        primary=MyColorFactory.createRandomly(CITY_COLOR_LIGHT);
+        secondary=primary.brighter().brighter();
     }    
-    
+
     public static int dist(City a, City b) {
-        return Point2.dist(a.pos,b.pos);
+        return Point2.defaultDist(a.pos,b.pos);
+    }
+
+    City(String name, Point2 pos, int reach, int pop100k, MyColor primary, MyColor secondary) {
+        this(name,pos,reach,pop100k);
+        if(!primary.equals(new MyColor(0,0,0,255)))
+            this.primary=primary;
+        if(!secondary.equals(new MyColor(0,0,0,255)))
+            this.secondary=secondary;
     }
 
     public void findAndSetNeighbors(CityMap cm){
@@ -64,15 +74,16 @@ public class City {
         if(this.neighbors==null||this.neighbors.closestNeighbors==null)
             return result;
         for(City n:this.neighbors.closestNeighbors.values()){
-            result.add(n.color);
+            result.add(n.primary);
         }
         return result;
     }
     
     public void makeColorUniqueFromNeighbors(){
         MyColorList cl=makeNeighborColorList();
-        if(MyColor.isTooCloseToAnotherInList(this.color,cl)){
-            this.color=MyColorFactory.createColorUniqueFromList(cl,750);
+        while(MyColor.isTooCloseToAnotherInList(this.primary,cl)){
+            final int COLOR_DIST=5;
+            this.primary=MyColorFactory.createDerivative(this.primary,false);
         }
     }
     
@@ -82,7 +93,7 @@ public class City {
         if(neighbors!=null)
             nborStr=neighbors.toString();
         String result=String.format("City: { name=\"%s\", pos=%s, reach=%d, pop100k=%d, color=%s, nbors=%s }",
-                        name,pos.toString(),reach,pop100k,color.toString(),nborStr);
+                        name,pos.toString(),reach,pop100k,primary.toString(),nborStr);
         return result;
     }
     

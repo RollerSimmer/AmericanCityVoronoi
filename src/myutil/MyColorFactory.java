@@ -81,7 +81,7 @@ public class MyColorFactory {
         return result;
     }
 
-    static MyColor createDerivative(MyColor base, boolean shouldChangeAlpha) {
+    public static MyColor createDerivative(MyColor base, boolean shouldChangeAlpha) {
         MyColor result;
         int r=base.getRed();
         int g=base.getGreen();
@@ -99,4 +99,5 @@ public class MyColorFactory {
         result=new MyColor(r,g,b,a);
         return result;
     }
+
 }

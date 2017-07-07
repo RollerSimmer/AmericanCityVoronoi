@@ -19,7 +19,7 @@ public class MyColor extends Color {
         return result;
     }
     
-    public static int MIN_CLOSENESS = 75;
+    public static int MIN_CLOSENESS = 25;
     
     public static boolean areColorsTooClose(MyColor c, MyColor other) {
         int taxiDist=MyColor.calcTaxiDist(c,other);
@@ -43,7 +43,7 @@ public class MyColor extends Color {
         super(r, g, b);
     }
 
-    MyColor(int r, int g, int b, int a) {
+    public MyColor(int r, int g, int b, int a) {
         super(r,g,b,a);
     }
     
@@ -53,6 +53,11 @@ public class MyColor extends Color {
         int b=(ca.getBlue()+cb.getBlue())/2;
         return new MyColor(r,g,b);
     }    
+    
+    public MyColor brighter(){
+        Color b=super.brighter();
+        return new MyColor(b.getRed(),b.getGreen(),b.getRed(),b.getAlpha());
+    }
     
     public MyColor somewhatBrighter(){
         MyColor b=new MyColor(brighter());
@@ -99,4 +104,23 @@ public class MyColor extends Color {
         result+=")";
         return result;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if(!MyColor.class.isAssignableFrom(o.getClass()))
+            return false;
+        MyColor c=(MyColor)o;
+        if(c.getRed()!=getRed())
+            return false;
+        if(c.getGreen()!=getGreen())
+            return false;
+        if(c.getBlue()!=getBlue())
+            return false;
+        if(c.getAlpha()!=getAlpha())
+            return false;
+        return true;
+    }
+
+    
+    
 }

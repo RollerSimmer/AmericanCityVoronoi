@@ -5,9 +5,11 @@
  */
 package americancityvoronoi;
 
+import americancityvoronoi.tree.TileSplit;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import math.Direction;
 import myutil.IntBounds;
 import myutil.MyColorList;
 import myutil.MyDebug;
@@ -26,6 +28,8 @@ public class CityCountry extends ArrayList<CityRegion> {
     public CityList unusedCandidates;
     public int targetAmtCitiesPerRegion;
     public int id;
+    
+    public static final int FITNESS_SCALE=10000;
     
     private static int nextId=0;
     
@@ -76,15 +80,17 @@ public class CityCountry extends ArrayList<CityRegion> {
         int amtCities=allCities.size();
         int roundLimit=amtCities*2;
         int round=0;
+        if(true)
+            return;
         while(!unusedCandidates.isEmpty()){
-            if(MyRandom.pctChance(1)){
-                if(round>roundLimit){
-//                  targetAmtCitiesPerRegion++;
-                    break;
-                }
-            }
+//            if(MyRandom.pctChance(1)){
+//                if(round>roundLimit){
+////                  targetAmtCitiesPerRegion++;
+//                    break;
+//                }
+//            }
             draftOne();
-            round++;
+//            round++;
         }
     }
  
@@ -92,8 +98,17 @@ public class CityCountry extends ArrayList<CityRegion> {
      * initializes all the regions to a random amount between min and max region amount
      */
     public void initAll() {
-        while(size()<targetAmtRegions && !unusedCandidates.isEmpty()){
-            addNewRegionFromUnusedCandidates();
+        TileSplit cityTree=new TileSplit(Direction.north,this.allCities);
+        int amtRegions=this.targetAmtRegions;
+        int amtCities=allCities.size();
+        int amtCitiesPerTile=amtCities/amtRegions*3/2;
+        if(amtCitiesPerTile==0)
+            return;
+        cityTree.branchAll(amtCitiesPerTile);
+        cityTree.print();
+        ArrayList<CityList> cityTileList=cityTree.getAllCityLists();        
+        for(CityList cityTile: cityTileList){
+            this.addNewRegionFromCityList(cityTile);
         }
         initTargetAmtCitiesPerRegion();
     }
@@ -106,14 +121,19 @@ public class CityCountry extends ArrayList<CityRegion> {
         if(unusedCandidates==null) 
             return false;        
         City c=unusedCandidates.popBellRandom();
-        if(c==null)
-            return false;
+        boolean result=addNewRegionFromCity(c);
+        return result;
+    }
+
+    private boolean addNewRegionFromCity(City c) {
+        if(c==null) 
+            return false;            
         CityRegion newRegion=new CityRegion(c,this);
         if(newRegion==null||!add(newRegion))
             return false;
         return true;
     }
-
+    
     /**
      * clears the region allegiance from each candidate
      */
@@ -129,13 +149,14 @@ public class CityCountry extends ArrayList<CityRegion> {
     private void draftOne() {
         if(this.isEmpty()||unusedCandidates.isEmpty()) 
             return;
-        City draftCity=unusedCandidates.getBellRandom();
-        if(draftCity==null)
-            return;
-        CityRegion rgn=findEligibleRegionClosestToCity(draftCity);
-        if(rgn==null || rgn.size()+1>targetAmtCitiesPerRegion || !rgn.add(draftCity))
-            return;
-        unusedCandidates.remove(draftCity);
+        try{
+            City draftCity=unusedCandidates.getBellRandom();
+            CityRegion rgn=findEligibleRegionClosestToCity(draftCity);
+            if(rgn.add(draftCity))
+                unusedCandidates.remove(draftCity);
+        } catch(NullPointerException ex){
+            
+        }
     }
 
     public void print() {
@@ -171,11 +192,19 @@ public class CityCountry extends ArrayList<CityRegion> {
     
     public int calcFitness() {
         myutil.IntBounds bounds=calcRegionSizeBounds();
-        final int BOUND_SCALE=50;
-        int result = (bounds.dev+bounds.span)*BOUND_SCALE*size();
+        final int BOUND_SCALE=FITNESS_SCALE;
+        final int SQUARENESS_SCALE=FITNESS_SCALE/100;
+        final int DISTANCE_SCALE=FITNESS_SCALE/1000;
+        int result = (bounds.dev)*BOUND_SCALE;
+        if(size()==0)
+            return result;
+        int distanceFactor=DISTANCE_SCALE/size();
+        int squarenessFactor=SQUARENESS_SCALE/size();
         for(CityRegion rgn:this){
-            int distTerm=rgn.calcAvgDistFromCenter();    
+            int distTerm=rgn.calcAvgDistFromCenter()*distanceFactor;    
             result+=distTerm;
+            int squarenessTerm=rgn.calcStandardInverseSquareness()*squarenessFactor;
+            result+=squarenessTerm;
         }
         return result;
     }
@@ -207,7 +236,7 @@ public class CityCountry extends ArrayList<CityRegion> {
     private void moveCityFromLargeRegionToNeighboringRegion() {
         try{
             CityRegion lr=this.findLarge();
-            if(lr!=null)
+            if(lr==null)
                 MyDebug.dummy=0;
             City c=lr.findEdgeCity();
             CityRegion fromRgn=c.getRegionAllegianceInCountry(this);
@@ -224,7 +253,7 @@ public class CityCountry extends ArrayList<CityRegion> {
     private void moveCityToSmallRegionFromNeighboringRegion() {
         try{
             CityRegion lr=this.findSmall();
-            if(lr!=null)
+            if(lr==null)
                 MyDebug.dummy=0;
             City c=lr.findEdgeCity();
             CityRegion toRgn=c.getRegionAllegianceInCountry(this);
@@ -239,18 +268,26 @@ public class CityCountry extends ArrayList<CityRegion> {
     }
 
     void mutateMany() {
-        final int MAX_MUTATIONS = 3;
+        final int MAX_MUTATIONS = 10;
         final int MAX_MUTATIONS_MINUS_ONE = MAX_MUTATIONS-1;
         int amtMutations=Math.abs(MyRandom.nextBell(-MAX_MUTATIONS_MINUS_ONE,MAX_MUTATIONS_MINUS_ONE))+1;
+        if(size()==0)
+            return;
+//        while(areThereCitiesAvailable()) {
+//            draftOne();
+//        }
         for(int m=0;m<amtMutations;m++){
             sortLargestFirst();
-            if(MyRandom.pctChance(0)){
+            int pickPct=MyRandom.next(1,100);
+            if(this.unusedCandidates.size()>0){
+                draftOne();
+            } else if(pickPct<=10){
                 moveRandomCityBetweenRegions();
-            } else if(MyRandom.pctChance(100)){
+            } else if(pickPct<=10){
                 moveCityFromLargeRegionToSmallRegion();                
-            } else if(MyRandom.pctChance(0)){
+            } else if(pickPct<=50){
                 moveCityFromLargeRegionToNeighboringRegion();                
-            } else{
+            } else {
                 moveCityToSmallRegionFromNeighboringRegion();                
             }
         }              
@@ -312,7 +349,23 @@ public class CityCountry extends ArrayList<CityRegion> {
         else
             targetAmtCitiesPerRegion=(this.allCities.size()+(targetAmtRegions-1))/targetAmtRegions;
     }
-    
+
+    private void addNewRegionFromCityList(CityList list) {
+        CityRegion rgn=new CityRegion(this);
+        for(int i=0;i<list.size();i++){
+            City c=list.get(i);
+//            if(i==0 || c.doesConnectToRegionInCountry(rgn, this)){
+                rgn.add(c); 
+                unusedCandidates.remove(c);
+//            }
+        }
+        add(rgn);
+    }
+
+    private boolean areThereCitiesAvailable() {
+        return !this.unusedCandidates.isEmpty();
+    }
+
     private static class CityRegionLargestSizeComparator implements Comparator<CityRegion>{
 
         @Override

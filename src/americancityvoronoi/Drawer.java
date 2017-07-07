@@ -39,7 +39,7 @@ import myutil.MyRandom;
  */
 public class Drawer extends JComponent {
     public static final int LINE_CLOSENESS_THRESHOLD=3;
-    public static boolean SHOULD_SHOW_NEIGHBOR_CONNECTIONS=true;
+    public static boolean SHOULD_SHOW_NEIGHBOR_CONNECTIONS=false;
     private final int SQUARE_SHIFT=4;
     private final int SQUARE_SIZE=1<<SQUARE_SHIFT;
     private final int DIAGRAM_PIXEL_SIZE=3;
@@ -72,10 +72,13 @@ public class Drawer extends JComponent {
     public void init(CityList cities) {
         this.cities=cities; 
         resizeCanvas();
-        if(extents.x==0||extents.y==0)
+        if(extents.x==0||extents.y==0){
             img=null;
-        else
+            System.out.println("img was set to null because one extent was zero.");
+        } else{
             img=new BufferedImage(scaledExtents.x,scaledExtents.y,BufferedImage.TYPE_3BYTE_BGR);
+            System.out.printf("img was initialized with extents (%d,%d).\n",scaledExtents.x,scaledExtents.y);
+        }
         initClosestCityMap();        
         gridColor=Color.GRAY.brighter();
         geoList=NorthAmericanGeographicListFactory.create();
@@ -102,10 +105,14 @@ public class Drawer extends JComponent {
     
     // draw painting
     public void updatePaint(){
-        this.g = img.createGraphics();
-        drawMap();
-        this.g.dispose();
-        repaint();
+        try{
+            this.g = img.createGraphics();
+            drawMap();
+            this.g.dispose();
+            repaint();
+        }catch(NullPointerException ex){
+            System.out.println("Canvas was not updated");
+        }
     }    
 
     private void drawMap() {
@@ -143,7 +150,7 @@ public class Drawer extends JComponent {
 ////                        System.out.printf("VoronoiDiagram: Drew black pixel at %s - %s\n",pos.toString(),ccp.toString());
 //                        drawDiagramPixel(x,y,Color.BLACK);                        
 //                    } else
-                        drawDiagramPixel(x,y,ccp.closestCity.color);
+                        drawDiagramPixel(x,y,ccp.closestCity.primary);
                 }
             }            
         }
@@ -156,7 +163,7 @@ public class Drawer extends JComponent {
         this.g.setFont(Font.getFont(Font.MONOSPACED));
         for(City c:cities){         
             IntVector2 namePos=IntVector2.scale(c.pos,DIAGRAM_PIXEL_SIZE);
-            drawCenteredText(c.name,namePos,MyColor.makeTransparent(c.color.darker(),3,100));
+            drawCenteredText(c.name,namePos,MyColor.makeTransparent(c.secondary,3,100));
         }
     }
 
@@ -164,7 +171,7 @@ public class Drawer extends JComponent {
         this.g.setFont(Font.getFont(Font.MONOSPACED));
         for(City c:cities){         
             IntVector2 dotPos=IntVector2.scale(c.pos,DIAGRAM_PIXEL_SIZE);
-            g.setColor(c.color.somewhatBrighter());
+            g.setColor(c.secondary);
             g.fillRect(dotPos.x-2,dotPos.y-2,4,4);
         }
     }

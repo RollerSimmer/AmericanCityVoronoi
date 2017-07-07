@@ -29,18 +29,18 @@ public class CityList extends ArrayList<City> {
         return maxs;
     }
     
-    CityList(){
+    public CityList(){
         maxs=new IntVector2(Integer.MIN_VALUE,Integer.MIN_VALUE);
         mins=new IntVector2(Integer.MAX_VALUE,Integer.MAX_VALUE);        
     }
 
-    CityList(City initialCity) {
+    public CityList(City initialCity) {
         this();
         if(initialCity!=null)
             this.add(initialCity);
     }
     
-    CityList(CityList copy){
+    public CityList(CityList copy){
         this();
         for(City c:copy){
             this.add(c);
@@ -94,15 +94,15 @@ public class CityList extends ArrayList<City> {
         return result;
     }
 
-    void print() {
+    public void print() {
         System.out.print(this.toString());
     }
     
-    void sortByPopulation(){
+    public void sortByPopulation(){
         Collections.sort(this,POP_COMP);
     }   
     
-    void makeCityColorsUnique(){
+    public void makeCityColorsUnique(){
         int amtPasses=3;
         for(int pass=0;pass<amtPasses;pass++){
             for(City c:this){
@@ -115,6 +115,7 @@ public class CityList extends ArrayList<City> {
     public String toString(){
         String result="";
         result+="CityList:\n";
+        result+=String.format("listSize=%d\n",size());
         int i=0;
         for(City c:this){
             result+=c.toString();
@@ -122,6 +123,17 @@ public class CityList extends ArrayList<City> {
         }
         return result;
     }    
+    
+    public String toSingleLineString(){
+        String result="(";
+        for(int i=0;i<size();i++){
+            result+=get(i).toShortString();
+            if(i+1<size())
+                result+=",";
+        }
+        result+=")";
+        return result;
+    }
 
     private int calcRandomIndex() {
         int hi=size()-1;
@@ -188,4 +200,15 @@ public class CityList extends ArrayList<City> {
         return result;
     }
 
+    City findLargest() {
+        City result=null;
+        int highPop=Integer.MIN_VALUE;
+        for(City c:this){
+            if(c.pop100k>highPop){
+                highPop=c.pop100k;
+                result=c;
+            }
+        }
+        return result;
+    }
 }

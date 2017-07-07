@@ -1,0 +1,338 @@
+#american cities
+#name|pos.x|pos.y|reach|pop100k|col.r|col.g|col.b
+Abilene|601|344|2|2|0|0|0
+Albany|861|242|2|2|0|0|0
+Albuquerque|532|317|3|12|0|0|0
+Alexandria, LA|674|355|2|2|0|0|0
+Amarillo|580|316|2|3|0|0|0
+Anchorage|100|56|2|4|0|0|0
+Anniston-Gadsden|739|330|2|2|0|0|0
+Atlanta|754|331|5|62|0|0|0
+Atlantic City|854|275|2|3|0|0|0
+Augusta, GA|778|335|3|6|0|0|0
+Augusta, ME|901|225|1|1|0|0|0
+Austin|621|365|4|19|0|0|0
+Bakersfield|408|315|3|9|0|0|0
+Bangor|911|220|2|2|0|0|0
+Barrie|801|225|2|2|0|0|0
+Baton Rouge|687|364|3|8|0|0|0
+Battle Creek|747|245|2|2|0|0|0
+Bay Area|374|291|5|83|0|0|0
+Billings|513|210|2|2|0|0|0
+Birmingham|730|333|3|13|0|0|0
+Bismark|591|200|1|1|0|0|0
+Boise|436|232|3|7|0|0|0
+Boston|888|245|5|75|0|0|0
+Brownsville|624|408|2|4|0|0|0
+Buffalo|810|239|3|12|0|0|0
+Burlington|866|224|2|2|0|0|0
+Calgary|458|158|3|14|0|0|0
+Cape Girardeau|703|295|1|1|0|0|0
+Casper|535|240|1|1|0|0|0
+Charleston, SC|799|340|3|7|0|0|0
+Charleston, WV|782|285|3|7|0|0|0
+Charlotte|790|316|4|25|0|0|0
+Chattanooga|746|318|3|9|0|0|0
+Chicago|722|250|5|99|0|0|0
+Cincinnati|753|277|4|22|0|0|0
+Cleveland|782|254|4|35|0|0|0
+Columbia, MO|675|279|2|2|0|0|0
+Columbia, SC|789|328|3|9|0|0|0
+Columbus, GA|750|343|2|5|0|0|0
+Columbus, OH|769|269|4|24|0|0|0
+Corpus Christi|627|391|2|5|0|0|0
+Colorado Springs|551|280|3|7|0|0|0
+Dallas-Ft. Worth|627|341|5|74|0|0|0
+Davenport|692|253|2|5|0|0|0
+Dayton|756|271|3|11|0|0|0
+DC-Baltimore|830|277|5|95|0|0|0
+Denver|550|271|4|33|0|0|0
+Des Moines|662|253|3|8|0|0|0
+Detroit|767|245|5|53|0|0|0
+Dodge City|598|291|1|1|0|0|0
+Dothan|745|356|2|3|0|0|0
+Duluth|677|201|2|3|0|0|0
+Edmonton|464|133|3|13|0|0|0
+El Paso|534|350|3|11|0|0|0
+Erie|798|247|2|4|0|0|0
+Fargo|630|200|2|3|0|0|0
+Flagstaff|482|316|1|1|0|0|0
+Fresno|401|301|3|11|0|0|0
+Ft Myers|778|402|3|10|0|0|0
+Ft. Wayne|747|257|3|6|0|0|0
+Gainesville|775|372|2|3|0|0|0
+Grand Island|615|259|1|1|0|0|0
+Grand Rapids|742|239|3|14|0|0|0
+Green Bay|719|223|2|4|0|0|0
+Greenville, NC|825|312|2|2|0|0|0
+Halifax|963|222|2|2|0|0|0
+Harrisburg|830|266|3|12|0|0|0
+Hartford|872|251|3|15|0|0|0
+Hattiesburg|705|355|2|2|0|0|0
+Honolulu|20|455|3|10|0|0|0
+Houston|645|371|5|67|0|0|0
+Huntsville|733|321|3|7|0|0|0
+Indianapolis|737|271|4|24|0|0|0
+Jackson|696|345|3|7|0|0|0
+Jacksonville|782|365|3|15|0|0|0
+Kalamazoo|743|245|2|3|0|0|0
+Kansas City|653|277|4|24|0|0|0
+Kelowna|404|170|2|2|0|0|0
+Kennewick|407|206|2|3|0|0|0
+Kingsport|774|304|2|5|0|0|0
+Kingston|834|226|2|2|0|0|0
+Kitchener|794|234|2|5|0|0|0
+Knoxville|759|309|3|11|0|0|0
+Lansing|753|241|2|5|0|0|0
+Lethbridge|470|171|1|1|0|0|0
+Lexington|754|288|3|7|0|0|0
+Little Rock|675|321|3|9|0|0|0
+London|786|238|2|5|0|0|0
+Los Angeles|414|328|6|185|0|0|0
+Louisville|742|287|3|15|0|0|0
+Lubbock|580|333|2|3|0|0|0
+Macon|764|343|2|4|0|0|0
+Madison|704|238|3|8|0|0|0
+Manchester|884|239|2|4|0|0|0
+McAllen|616|406|3|9|0|0|0
+Memphis|699|317|3|14|0|0|0
+Miami|796|411|5|67|0|0|0
+Midland|577|348|2|3|0|0|0
+Milwaukee|719|238|4|20|0|0|0
+Modesto|389|292|3|8|0|0|0
+Montgomery|736|345|2|4|0|0|0
+Montreal|863|213|4|41|0|0|0
+MPGB|717|362|3|14|0|0|0
+Myrtle Beach|810|331|2|5|0|0|0
+Nashville|731|307|4|19|0|0|0
+NC Triad|798|308|4|16|0|0|0
+NC Triangle|811|310|4|20|0|0|0
+New Orleans|699|368|3|15|0|0|0
+New York|859|262|6|236|0|0|0
+North Platte|591|257|1|1|0|0|0
+Oklahoma City|623|314|3|14|0|0|0
+Omaha-Lincoln|635|258|3|13|0|0|0
+Orlando|785|384|4|31|0|0|0
+Ottawa|841|214|3|13|0|0|0
+Peterborough|815|225|1|1|0|0|0
+Philadelphia|847|268|5|67|0|0|0
+Phoenix|478|333|4|45|0|0|0
+Pittsburgh|799|264|4|27|0|0|0
+Ponce|932|488|2|4|0|0|0
+Portland, OR|372|213|4|31|0|0|0
+Portland, ME|896|232|3|6|0|0|0
+Prince George|371|129|1|1|0|0|0
+Providence|884|250|4|16|0|0|0
+Pueblo|552|286|2|2|0|0|0
+Quebec City|886|200|3|8|0|0|0
+Rapid City|566|228|2|2|0|0|0
+Regina|552|164|2|2|0|0|0
+Reno|401|274|3|6|0|0|0
+Richmond|824|293|3|13|0|0|0
+Roanoke|799|296|2|3|0|0|0
+Rochester|822|237|3|12|0|0|0
+Roswell|553|334|1|1|0|0|0
+Sacramento|384|283|4|25|0|0|0
+Saginaw|759|234|2|4|0|0|0
+Saguenay|888|184|2|2|0|0|0
+Saint John|938|216|1|1|0|0|0
+Salinas|382|301|2|4|0|0|0
+Salisbury|842|285|2|4|0|0|0
+Salt Lake|479|261|4|24|0|0|0
+San Angelo|594|354|1|1|0|0|0
+San Antonio|613|374|4|23|0|0|0
+San Diego|427|340|4|33|0|0|0
+San Juan|937|484|4|25|0|0|0
+San Luis Obispo|392|316|2|3|0|0|0
+Santa Barbara|401|324|2|4|0|0|0
+Santa Cruz|378|299|2|3|0|0|0
+Saskatoon|532|147|2|3|0|0|0
+Savannah|787|348|2|5|0|0|0
+Seattle|375|192|4|45|0|0|0
+Sherbrooke|880|214|2|2|0|0|0
+Shreveport|661|344|2|5|0|0|0
+Sioux Falls|631|233|2|3|0|0|0
+South Bend|736|252|3|7|0|0|0
+Space Coast|792|387|3|6|0|0|0
+Spokane|424|192|3|7|0|0|0
+Springfield, MA|873|247|3|7|0|0|0
+Springfield, MO|666|296|2|5|0|0|0
+St. George|463|297|2|2|0|0|0
+St. John's|1071|193|2|2|0|0|0
+St. Louis|696|282|4|29|0|0|0
+Sudbury|789|203|2|2|0|0|0
+Syracuse|837|238|3|7|0|0|0
+Tallahassee|756|364|2|4|0|0|0
+Tampa Bay|773|391|4|39|0|0|0
+Texarkana|658|334|2|2|0|0|0
+Thunder Bay|706|184|1|1|0|0|0
+Tidewater|837|300|4|18|0|0|0
+Toledo|763|252|3|6|0|0|0
+Toronto-Hamilton|805|232|5|67|0|0|0
+Tucson|490|347|3|11|0|0|0
+Tulsa|639|307|3|11|0|0|0
+Tupelo|711|326|1|1|0|0|0
+Twin Cities|667|219|4|38|0|0|0
+Tyler|645|345|2|3|0|0|0
+Upstate SC|777|320|3|14|0|0|0
+Valdosta|766|360|2|2|0|0|0
+Vancouver, BC|367|176|4|26|0|0|0
+Vegas|446|306|4|23|0|0|0
+Victoria|628|380|2|4|0|0|0
+Visalia|405|305|3|6|0|0|0
+Waco|627|353|2|3|0|0|0
+Wichita|625|291|3|7|0|0|0
+Winnipeg|627|169|3|8|0|0|0
+Wyo Valley|841|255|3|6|0|0|0
+Yakima|393|202|2|2|0|0|0
+Yuma|452|341|2|2|0|0|0
+Missoula|458|200|1|1|0|0|0
+Great Falls|486|193|1|1|0|0|0
+Butte|473|208|1|1|0|0|0
+Bozeman|488|212|1|1|0|0|0
+Idaho Falls|478|233|2|2|0|0|0
+Topeka|642|278|2|2|0|0|0
+Twin Falls|454|243|1|1|0|0|0
+Eugene|368|228|2|4|0|0|0
+Redding|375|263|2|3|0|0|0
+Elko|441|260|1|1|0|0|0
+Farmington, NM|516|301|2|2|0|0|0
+Grand Junction|513|278|2|2|0|0|0
+Fairbanks|121|20|1|1|0|0|0
+Juneau|254|85|1|1|0|0|0
+Terrace|312|123|1|1|0|0|0
+Sydney, NS|997|207|1|1|0|0|0
+Peoria|703|261|2|4|0|0|0
+Rockford|708|246|2|5|0|0|0
+Springfield, IL|702|271|2|3|0|0|0
+Champaign-Urbana|716|267|2|2|0|0|0
+Bloomington, IL|709|264|2|2|0|0|0
+Cheyenne|550|257|1|1|0|0|0
+Lancaster, PA|835|268|2|5|0|0|0
+Fayetteville, AR|657|308|3|6|0|0|0
+Cedar Rapids, IA|682|249|2|4|0|0|0
+Kileen|621|357|2|4|0|0|0
+Hickory, NC|785|311|2|4|0|0|0
+Appleton-Oshkosh|713|227|2|4|0|0|0
+Clarksville|725|303|2|3|0|0|0
+Wausau|702|219|2|3|0|0|0
+Medford, OR|370|245|2|3|0|0|0
+Utica-Rome|845|237|2|3|0|0|0
+Longview|651|343|2|3|0|0|0
+Fort Smith|654|315|2|3|0|0|0
+Wilmington, NC|819|326|2|3|0|0|0
+Laredo|604|393|2|3|0|0|0
+Bloomsburg|834|258|2|3|0|0|0
+PCDFWB|738|365|2|5|0|0|0
+Rocky Mount|821|309|2|3|0|0|0
+Lynchburg, VA|807|294|2|3|0|0|0
+Monroe, LA|677|343|2|3|0|0|0
+Rochester, MN|674|228|2|3|0|0|0
+Harrisonburg|810|284|2|3|0|0|0
+Binghamton|839|247|2|3|0|0|0
+Lafayette, LA|678|366|2|3|0|0|0
+College Station|635|362|2|3|0|0|0
+Tuscaloosa|723|336|2|3|0|0|0
+Charlottesville|814|288|2|2|0|0|0
+Chico|380|271|2|2|0|0|0
+Lima|757|261|2|2|0|0|0
+Bowling Green, KY|734|299|2|2|0|0|0
+Prescott|474|323|2|2|0|0|0
+Claremont, NH|875|235|2|2|0|0|0
+Mansfield, OH|773|261|2|2|0|0|0
+Johnstown, PA|809|265|2|2|0|0|0
+Houma-Thibodaux|691|371|2|2|0|0|0
+Bloomington, IN|733|277|2|2|0|0|0
+Eau Claire|735|249|2|2|0|0|0
+Bellingham|374|181|2|2|0|0|0
+Joplin|653|298|2|2|0|0|0
+Florence, SC|801|326|2|2|0|0|0
+Lake Charles|666|366|2|2|0|0|0
+Yuma|452|341|2|2|0|0|0
+Hilton Head Island|791|346|2|2|0|0|0
+New Bern|828|317|2|2|0|0|0
+Hilo|48|471|2|2|0|0|0
+Morgantown|799|272|2|2|0|0|0
+Bend|385|228|2|2|0|0|0
+Elmira|830|247|2|2|0|0|0
+Blacksburg|794|296|2|2|0|0|0
+El Centro|443|340|2|2|0|0|0
+Terre Haute|724|274|2|2|0|0|0
+Jonesboro|691|310|2|2|0|0|0
+Waterloo, IA|675|243|2|2|0|0|0
+Kahului|34|459|2|2|0|0|0
+Williamsport|828|256|2|2|0|0|0
+Albany, GA|757|353|2|2|0|0|0
+Ithaca|833|244|2|2|0|0|0
+Parkersburg, WV|783|276|2|2|0|0|0
+Wichita Falls, TX|614|329|2|2|0|0|0
+Shoals|722|321|2|2|0|0|0
+Traverse City|742|221|2|2|0|0|0
+Pottsville|836|262|2|2|0|0|0
+Wheeling|791|268|2|2|0|0|0
+Homosassa Springs|773|380|1|1|0|0|0
+La Crosse|686|230|1|1|0|0|0
+Paducah|712|298|1|1|0|0|0
+Eureka, KS|636|290|1|1|0|0|0
+Manhattan, KS|633|277|1|1|0|0|0
+Jamestown, NY|806|247|1|1|0|0|0
+Logan|480|251|1|1|0|0|0
+Lawton|614|322|1|1|0|0|0
+Findlay-Tiffin|764|258|1|1|0|0|0
+Hot Springs|668|323|1|1|0|0|0
+Jackson, TN|710|312|1|1|0|0|0
+Pittsfield, MA|866|244|1|1|0|0|0
+Edwards, CO|533|272|1|1|0|0|0
+Sierra Vista|496|353|1|1|0|0|0
+London, KY|758|297|1|1|0|0|0
+Carbondale|706|291|1|1|0|0|0
+Altoona, PA|815|263|1|1|0|0|0
+Goldsboro|819|315|1|1|0|0|0
+Mankato|658|227|1|1|0|0|0
+Beckley|787|291|1|1|0|0|0
+Rome, GA|747|326|1|1|0|0|0
+Victoria, TX|628|380|1|1|0|0|0
+Waterown, NY|839|229|1|1|0|0|0
+Kokomo|737|264|1|1|0|0|0
+Owensboro|727|291|1|1|0|0|0
+Quincy|684|269|1|1|0|0|0
+Wooster, OH|779|260|1|1|0|0|0
+Sheboygan|721|231|1|1|0|0|0
+Brunswick, GA|784|357|1|1|0|0|0
+Wenatchee|395|194|1|1|0|0|0
+Moses Lake|406|197|1|1|0|0|0
+Mount Pleasant, MI|751|232|1|1|0|0|0
+Odgensburg|844|221|1|1|0|0|0
+Decatur, IL|709|270|1|1|0|0|0
+Show Low|498|326|1|1|0|0|0
+Sumter|795|329|1|1|0|0|0
+Cookeville|743|307|1|1|0|0|0
+Roseburg|365|236|1|1|0|0|0
+Meridian, MS|711|345|1|1|0|0|0
+Bluefield|786|296|1|1|0|0|0
+Danville, VA|805|303|1|1|0|0|0
+Grand Forks|628|189|1|1|0|0|0
+Fond Du Lac|714|231|1|1|0|0|0
+Tullahoma|736|315|1|1|0|0|0
+Cumberland, MD|811|272|1|1|0|0|0
+Sebring, FL|784|393|1|1|0|0|0
+Dubuque|692|243|1|1|0|0|0
+Kalispell|455|186|1|1|0|0|0
+Clarksburg, WV|795|276|1|1|0|0|0
+Pinehurst|804|316|1|1|0|0|0
+Brainerd|656|205|1|1|0|0|0
+Red Deer|460|146|1|1|0|0|0
+Nanaimo, BC|359|177|1|1|0|0|0
+Kamloops|395|162|1|1|0|0|0
+Trois-Rivieres|873|205|1|1|0|0|0
+Guelph|796|233|1|1|0|0|0
+Belleville|825|227|1|1|0|0|0
+Chatham-Kent|777|244|1|1|0|0|0
+Fredericton|932|209|1|1|0|0|0
+Chilliwack|379|177|1|1|0|0|0
+Sarnia|774|239|1|1|0|0|0
+Drummondville|874|210|1|1|0|0|0
+Saul Ste. Marie|755|203|1|1|0|0|0
+Medicine Hat|492|168|1|1|0|0|0
+Moncton|951|208|1|1|0|0|0
+Brantford|796|237|1|1|0|0|0

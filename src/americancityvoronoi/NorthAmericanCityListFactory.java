@@ -15,8 +15,8 @@ public class NorthAmericanCityListFactory {
     
     public static boolean SHOULD_ADD_ALL_CITIES=true;
     public static boolean SHOULD_REMOVE_SMALL_CITIES=true;
-    public static int MIN_POP_THRESHOLD=3;
-    public static int MAX_POP_THRESHOLD=10;
+    public static int MIN_POP_THRESHOLD=0;
+    public static int MAX_POP_THRESHOLD=400;
 
     private static CityList result=null;
 
@@ -29,7 +29,6 @@ public class NorthAmericanCityListFactory {
         result.add(/*name*/new City(	"New York"	,/*pos*/new Point2(	861-XOFS	,	293-YOFS	),/*reach*/	16	,/*pop100k*/	236	));
         result.add(/*name*/new City(	"Philadelphia"	,/*pos*/new Point2(	849-XOFS	,	300-YOFS	),/*reach*/	9	,/*pop100k*/	67	));
     }
-
 
     private static void addAllCities() {
         

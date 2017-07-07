@@ -15,7 +15,8 @@ import java.util.logging.Logger;
 public class IntVector2 {
 
     public static boolean IS_DEFAULT_DIST_TAXI=false;
-    
+    public static boolean IS_DEFAULT_DIST_OCTAGON_OTHERWISE=true;
+
     public int x;
     public int y;
 
@@ -72,12 +73,48 @@ public class IntVector2 {
         return result;
     }
     
+    public void mulEqu(int factor){
+        x*=factor;
+        y*=factor;
+    }
+    
+    public Point2 mul(int factor){
+        Point2 result=new Point2(this);
+        result.mulEqu(factor);
+        return result;
+    }
+    
+    public int defaultMag() {
+        if(IS_DEFAULT_DIST_TAXI)
+            return taxiMag();
+        else if(IS_DEFAULT_DIST_OCTAGON_OTHERWISE)
+            return octagonMag();
+        else
+            return pythagoreanMag();
+    }
+        
+    public static int defaultDist(IntVector2 a,IntVector2 b){
+        IntVector2 displacement=IntVector2.sub(a,b);
+        return displacement.defaultMag();
+    }
+    
     /**
      * 
      * @return the estimated magnitude of the integer vector
      */
+    
+    public int pythagoreanMag(){
+        int resultSquared=x*x + y*y;
+        int result=0;
+        try{
+            result=MyMath.intSqrt(resultSquared);
+        }catch(Exception ex){
+            System.err.println(ex.toString());
+        }
+        return result;
+    }
 
-    public int mag(){
+    public int octagonMag(){
         int result=0;
         int ax=Math.abs(x);
         int ay=Math.abs(y);
@@ -117,30 +154,6 @@ public class IntVector2 {
         result=ax+ay;
         return result;
     }
-    
-    /**
-     * 
-     * @param a one point
-     * @param b another point
-     * @return the estimated distance between the two points
-     */
-    public static int dist(IntVector2 a,IntVector2 b){
-        IntVector2 diff=IntVector2.sub(a,b);
-        return diff.mag();
-    }
-    
-    public static int taxiDist(IntVector2 a,IntVector2 b){
-        IntVector2 diff=IntVector2.sub(a,b);
-        return diff.taxiMag();
-    }    
-    
-    public static int defaultDist(IntVector2 a,IntVector2 b){
-        if(IS_DEFAULT_DIST_TAXI)
-            return taxiDist(a,b);
-        else
-            return dist(a,b);
-    }
-    
 
     public void divEqu(int divisor) {
         x/=divisor;
@@ -161,6 +174,12 @@ public class IntVector2 {
     public static IntVector2 scale(IntVector2 pos, int scaleFactor) {
         return pos.scaleCopy(scaleFactor);
     }
+
+    public static int dotProduct(IntVector2 a, IntVector2 b, IntScale vectorScale) {
+        int dot=a.x*b.x + a.y*b.y;
+        int result = IntScale.scaleBy(dot,vectorScale);
+        return result;
+    }
     
     @Override
     public String toString(){
@@ -175,9 +194,11 @@ public class IntVector2 {
                 int xPrime=x*scalingFactor;
                 int yPrime=y*scalingFactor;
                 IntVector2 a=new IntVector2(xPrime,yPrime);
-                int magnitude=a.mag();
+                int magnitude=a.pythagoreanMag();
                 System.out.printf("xPrime=%d,yPrime=%d,mag=%d\t%d\t%d\t%d\n",xPrime,yPrime,magnitude,xPrime,yPrime,magnitude);
             }
         }
     }
+
+    
 }
